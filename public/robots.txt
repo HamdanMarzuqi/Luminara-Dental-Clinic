@@ -1,0 +1,10 @@
+# Robots.txt for Duwa Dental
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://duwadental.com/sitemap.xml
+
+# Disallow admin/private paths (none currently, but good practice)
+Disallow: /node_modules/
+Disallow: /src/

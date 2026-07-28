@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 140" fill="none">
+  <defs>
+    <linearGradient id="tooth-grad-full" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#8a1470"/>
+      <stop offset="40%" stop-color="#b61872"/>
+      <stop offset="70%" stop-color="#d91b78"/>
+      <stop offset="100%" stop-color="#ea207b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Group 1: Tooth Icon -->
+  <g transform="translate(10, 5) scale(0.85)">
+    <!-- Molar Tooth Body -->
+    <path d="M60 15 C88 15 105 32 105 60 C105 82 98 100 88 118 C82 129 74 140 68 142 C63 144 61 130 58 120 C55 110 52 110 49 120 C46 130 44 144 39 142 C33 140 25 129 19 118 C9 100 2 82 2 60 C2 32 19 15 47 15 C52 15 56 16 60 15Z" 
+          fill="url(#tooth-grad-full)" />
+    <!-- White Highlight -->
+    <path d="M26 34 C22 42 21 54 23 66 C24 72 26 77 27 75 C28 73 28 66 27 58 C25 48 27 40 31 34 C32 32 30 31 26 34Z" 
+          fill="#ffffff" 
+          opacity="0.95" />
+  </g>
+
+  <!-- Group 2: Typography -->
+  <!-- Main Title: LUMINARA -->
+  <text x="135" y="78" 
+        fill="#301340" 
+        font-family="'Playfair Display', 'Cinzel', 'Didot', 'Bodoni MT', Georgia, serif" 
+        font-size="62" 
+        font-weight="600" 
+        letter-spacing="5">LUMINARA</text>
+
+  <!-- Subtitle: AESTHETIC DENTAL CLINIC -->
+  <text x="137" y="116" 
+        fill="#d61a75" 
+        font-family="'Poppins', 'Montserrat', 'Helvetica Neue', sans-serif" 
+        font-size="22" 
+        font-weight="600" 
+        letter-spacing="7.5">AESTHETIC DENTAL CLINIC</text>
+</svg>
