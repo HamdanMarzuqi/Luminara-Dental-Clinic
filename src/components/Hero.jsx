@@ -143,7 +143,7 @@ export default function Hero({ onOpenBooking }) {
               </div>
 
               {/* Floating Badge 1: Kids & ABK Friendly */}
-              <div className="absolute -top-4 -left-4 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-pulse-subtle">
+              <div className="absolute -top-2 -left-2 sm:-top-4 sm:-left-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-pulse-subtle">
                 <div className="w-10 h-10 rounded-xl bg-pink-100 text-pink-700 flex items-center justify-center font-bold">
                   <Heart className="w-5 h-5 fill-pink-600" />
                 </div>
@@ -154,7 +154,7 @@ export default function Hero({ onOpenBooking }) {
               </div>
 
               {/* Floating Badge 2: Jam Layanan */}
-              <div className="absolute -bottom-4 -right-4 sm:-right-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-6 bg-white p-3 sm:p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
                   <Clock className="w-5 h-5" />
                 </div>

@@ -9,7 +9,8 @@ import Articles from './components/Articles';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
-import { MessageCircle, ChevronUp } from 'lucide-react';
+import { ChevronUp } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -60,16 +61,15 @@ function App() {
         initialTreatment={selectedTreatment}
       />
 
-      {/* Floating WhatsApp Quick Action Button */}
+      {/* Floating WhatsApp Quick Action Button — label always visible (not hover-only) so mobile/touch users see it too */}
       <button
         onClick={() => handleOpenBooking('')}
         aria-label="Chat WhatsApp Admin Luminara Dental"
-        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group"
+        style={{ bottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
+        className="fixed right-6 z-40 bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white pl-3.5 pr-4 py-3 sm:pl-4 sm:pr-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group"
       >
-        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 fill-white/20" />
-        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-bold pl-0 group-hover:pl-2">
-          Chat Admin WA
-        </span>
+        <FaWhatsapp className="w-6 h-6 sm:w-7 sm:h-7 shrink-0" />
+        <span className="text-xs sm:text-sm font-bold whitespace-nowrap">Chat WA</span>
       </button>
 
       {/* Scroll to Top Button */}
@@ -77,7 +77,8 @@ function App() {
         <button
           onClick={scrollToTop}
           aria-label="Kembali ke atas"
-          className="fixed bottom-6 left-6 z-40 bg-slate-800 hover:bg-pink-600 text-white w-11 h-11 rounded-full shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center animate-fadeIn"
+          style={{ bottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
+          className="fixed left-6 z-40 bg-slate-800 hover:bg-pink-600 text-white w-11 h-11 rounded-full shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center animate-fadeIn"
         >
           <ChevronUp className="w-5 h-5" />
         </button>
