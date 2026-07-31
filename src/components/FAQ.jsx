@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { faqs } from '../data/duwaData';
+import { faqs } from '../data/luminaraData';
 import { HelpCircle, ChevronDown, MessageCircle } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '../context/LanguageContext';

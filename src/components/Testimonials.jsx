@@ -1,5 +1,5 @@
 import React from 'react';
-import { testimonials } from '../data/duwaData';
+import { testimonials } from '../data/luminaraData';
 import { Star, Quote, Heart } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '../context/LanguageContext';
@@ -66,6 +66,7 @@ export default function Testimonials() {
                   <img
                     src={item.avatar}
                     alt={item.name}
+                    loading="lazy"
                     className="w-12 h-12 rounded-full object-cover border-2 border-pink-400"
                   />
                   <div>

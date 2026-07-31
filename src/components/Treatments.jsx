@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { treatments } from '../data/duwaData';
+import { treatments } from '../data/luminaraData';
 import { Sparkles, ArrowRight, CheckCircle2, MessageCircle, Info, X } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '../context/LanguageContext';
+import { useModalA11y } from '../hooks/useModalA11y';
 
 export default function Treatments({ onOpenBooking }) {
   const { lang } = useLanguage();
@@ -11,12 +12,15 @@ export default function Treatments({ onOpenBooking }) {
 
   const [selectedCategory, setSelectedCategory] = useState('Semua');
   const [activeModal, setActiveModal] = useState(null);
+  const modalRef = useModalA11y(!!activeModal, () => setActiveModal(null));
 
+  const ALL_KEY = 'Semua';
   const categories = isEn
-    ? ['Semua', 'Orthodontics', 'Cleaning', 'Aesthetics', 'Restoration', 'Pediatric']
-    : ['Semua', 'Ortodonti', 'Pembersihan', 'Estetika', 'Restorasi', 'Gigi Anak'];
+    ? [ALL_KEY, 'Orthodontics', 'Cleaning', 'Aesthetics', 'Restoration', 'Pediatric']
+    : [ALL_KEY, 'Ortodonti', 'Pembersihan', 'Estetika', 'Restorasi', 'Gigi Anak'];
+  const categoryLabels = { [ALL_KEY]: isEn ? 'All' : 'Semua' };
 
-  const filteredTreatments = selectedCategory === 'Semua' 
+  const filteredTreatments = selectedCategory === ALL_KEY 
     ? currentTreatments 
     : currentTreatments.filter(t => t.category === selectedCategory);
 
@@ -57,7 +61,7 @@ export default function Treatments({ onOpenBooking }) {
                     : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                 }`}
               >
-                {cat}
+                {categoryLabels[cat] || cat}
               </button>
             ))}
           </div>
@@ -75,6 +79,7 @@ export default function Treatments({ onOpenBooking }) {
                   <img
                     src={item.image}
                     alt={item.name}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
@@ -128,7 +133,13 @@ export default function Treatments({ onOpenBooking }) {
             onClick={(e) => e.target === e.currentTarget && setActiveModal(null)}
             className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-slate-900/70 backdrop-blur-sm animate-fadeIn overflow-y-auto"
           >
-            <div className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full max-h-[90vh] sm:max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-slate-100 relative animate-scaleUp my-auto">
+            <div
+              ref={modalRef}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="treatment-modal-title"
+              className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full max-h-[90vh] sm:max-h-[85vh] flex flex-col overflow-hidden shadow-2xl border border-slate-100 relative animate-scaleUp my-auto"
+            >
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
@@ -142,6 +153,7 @@ export default function Treatments({ onOpenBooking }) {
                 <img
                   src={activeModal.image}
                   alt={activeModal.name}
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
@@ -149,7 +161,7 @@ export default function Treatments({ onOpenBooking }) {
                   <span className="bg-pink-500 text-white text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-md">
                     {activeModal.category}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mt-1 leading-tight">{activeModal.name}</h3>
+                  <h3 id="treatment-modal-title" className="text-xl sm:text-2xl font-bold text-white mt-1 leading-tight">{activeModal.name}</h3>
                 </div>
               </div>
 

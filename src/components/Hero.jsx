@@ -62,7 +62,7 @@ export default function Hero({ onOpenBooking }) {
             <div className="pt-1 grid grid-cols-2 gap-3 max-w-md mx-auto lg:mx-0 text-xs sm:text-sm text-slate-700 font-medium">
               <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <CheckCircle2 className="w-4 h-4 text-pink-600 flex-shrink-0" />
-                <span>Painless Scaling & Treatment</span>
+                <span>{isEn ? 'Painless Scaling & Treatment' : 'Scaling & Perawatan Tanpa Sakit'}</span>
               </div>
               <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <CheckCircle2 className="w-4 h-4 text-pink-600 flex-shrink-0" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { coreValues } from '../data/duwaData';
+import { coreValues } from '../data/luminaraData';
 import { HeartHandshake, ShieldCheck, Sparkles, Smile, Award, CheckCircle } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '../context/LanguageContext';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { articles } from '../data/duwaData';
+import { articles } from '../data/luminaraData';
 import { BookOpen, ArrowRight, Clock } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import { useLanguage } from '../context/LanguageContext';
@@ -56,6 +56,7 @@ export default function Articles() {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full">

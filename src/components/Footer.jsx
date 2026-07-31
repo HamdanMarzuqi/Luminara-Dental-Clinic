@@ -1,5 +1,5 @@
 import React from 'react';
-import { siteInfo } from '../data/duwaData';
+import { siteInfo } from '../data/luminaraData';
 import { MapPin, Phone, Mail, Clock, Heart } from 'lucide-react';
 import { FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';

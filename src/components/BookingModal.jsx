@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { siteInfo } from '../data/duwaData';
+import { siteInfo } from '../data/luminaraData';
 import { X, MessageCircle, User, Phone, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useModalA11y } from '../hooks/useModalA11y';
 
 export default function BookingModal({ isOpen, onClose, initialTreatment = '' }) {
   const { lang } = useLanguage();
@@ -25,22 +26,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
     }
   }, [initialTreatment]);
 
-  // Lock background scroll when modal is open and add keydown listener for Escape
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      const handleKeyDown = (e) => {
-        if (e.key === 'Escape') onClose();
-      };
-      window.addEventListener('keydown', handleKeyDown);
-      return () => {
-        document.body.style.overflow = 'unset';
-        window.removeEventListener('keydown', handleKeyDown);
-      };
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }, [isOpen, onClose]);
+  const modalRef = useModalA11y(isOpen, onClose);
 
   if (!isOpen) return null;
 
@@ -103,7 +89,13 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
       onClick={(e) => e.target === e.currentTarget && onClose()}
       className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-slate-900/70 backdrop-blur-sm animate-fadeIn overflow-y-auto"
     >
-      <div className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full max-h-[90vh] sm:max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 relative animate-scaleUp overflow-hidden my-auto">
+      <div
+        ref={modalRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-modal-title"
+        className="bg-white rounded-2xl sm:rounded-3xl max-w-lg w-full max-h-[90vh] sm:max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 relative animate-scaleUp overflow-hidden my-auto"
+      >
         
         {/* Header */}
         <div className="bg-gradient-to-r from-pink-500 via-fuchsia-600 to-purple-600 p-4 sm:p-6 text-white relative shrink-0">
@@ -120,7 +112,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
             <Sparkles className="w-3.5 h-3.5" />
             <span>{isEn ? 'Online Reservation 24/7' : 'Reservasi Online 24/7'}</span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold pr-6 sm:pr-8 leading-tight">{isEn ? 'Book Treatment Appointment' : 'Reservasi Jadwal Perawatan'}</h3>
+          <h3 id="booking-modal-title" className="text-xl sm:text-2xl font-bold pr-6 sm:pr-8 leading-tight">{isEn ? 'Book Treatment Appointment' : 'Reservasi Jadwal Perawatan'}</h3>
           <p className="text-pink-100 text-xs sm:text-sm mt-1 leading-snug">
             {isEn ? 'Fill out this short form to directly connect with Luminara WhatsApp Admin.' : 'Isi formulir singkat ini untuk langsung terhubung dengan Admin WhatsApp Luminara Dental.'}
           </p>
@@ -206,6 +198,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
               </label>
               <input
                 type="date"
+                min={new Date().toISOString().split('T')[0]}
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                 className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all min-h-[42px]"
