@@ -1,17 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { navLinks, siteInfo } from '../data/luminaraData';
-import { ChevronDown, Globe, Check } from 'lucide-react';
+import { ChevronDown, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar({ onOpenBooking }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const langRef = useRef(null);
 
-  const { lang, setLang } = useLanguage();
+  const { lang, toggleLang } = useLanguage();
   const currentNavLinks = navLinks[lang] || navLinks.id;
   const currentSiteInfo = siteInfo[lang] || siteInfo.id;
 
@@ -29,26 +27,22 @@ export default function Navbar({ onOpenBooking }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdowns on outside click
+  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setDropdownOpen(false);
-      }
-      if (langRef.current && !langRef.current.contains(e.target)) {
-        setLangOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Close dropdowns on Escape
+  // Close dropdown on Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         setDropdownOpen(false);
-        setLangOpen(false);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -127,46 +121,18 @@ export default function Navbar({ onOpenBooking }) {
             ))}
           </nav>
 
-          {/* Right Cluster: only Language switcher (phone + CTA removed — covered by floating WhatsApp button) */}
+          {/* Right Cluster: only Language toggle (phone + CTA removed — covered by floating WhatsApp button) */}
           <div className="hidden md:flex items-center shrink-0">
-
-            {/* Language Switcher — compact dropdown */}
-            <div className="relative" ref={langRef}>
-              <button
-                onClick={() => setLangOpen(!langOpen)}
-                aria-expanded={langOpen}
-                aria-haspopup="true"
-                aria-label="Switch language"
-                className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-100"
-              >
-                <Globe className="w-4 h-4 text-slate-500" />
-                <span className="hidden xl:inline">{currentLang.label}</span>
-                <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {langOpen && (
-                <div
-                  className="absolute right-0 top-full mt-1 w-44 bg-white rounded-xl shadow-lg ring-1 ring-slate-200/60 py-1.5 animate-fadeIn z-10"
-                  role="menu"
-                >
-                  {languages.map((l) => (
-                    <button
-                      key={l.code}
-                      role="menuitem"
-                      onClick={() => { setLang(l.code); setLangOpen(false); }}
-                      className={`w-full flex items-center gap-2.5 px-3 py-2 text-sm transition-colors focus:outline-none ${
-                        lang === l.code
-                          ? 'bg-pink-50 text-pink-700 font-semibold'
-                          : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                      }`}
-                    >
-                      <span className="text-base">{l.flag}</span>
-                      <span className="flex-1 text-left">{l.full}</span>
-                      {lang === l.code && <Check className="w-3.5 h-3.5 text-pink-600" />}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* Language Toggle — single click switches ID <-> EN */}
+            <button
+              onClick={toggleLang}
+              aria-label={`Switch language (current: ${currentLang.full})`}
+              title={`Switch to ${lang === 'id' ? 'English' : 'Bahasa Indonesia'}`}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors focus:outline-none focus:bg-slate-100"
+            >
+              <Globe className="w-4 h-4 text-slate-500" />
+              <span className="hidden xl:inline">{currentLang.flag} {currentLang.label}</span>
+            </button>
           </div>
 
           {/* Mobile Right Controls — animated hamburger (CTA removed; floating WhatsApp covers it) */}
@@ -241,38 +207,17 @@ export default function Navbar({ onOpenBooking }) {
               </div>
             ))}
 
-            {/* Mobile cluster: language only (phone removed — covered by floating WhatsApp button) */}
+            {/* Mobile cluster: language toggle only (phone removed — covered by floating WhatsApp button) */}
             <div className="pt-3 mt-2 border-t border-slate-100 flex items-center justify-end">
-              <div className="relative" ref={langRef}>
-                <button
-                  onClick={() => setLangOpen(!langOpen)}
-                  aria-expanded={langOpen}
-                  className="flex items-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-sm font-semibold text-slate-700 transition-colors"
-                >
-                  <Globe className="w-4 h-4 text-slate-500" />
-                  <span>{currentLang.label}</span>
-                  <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {langOpen && (
-                  <div className="absolute right-0 bottom-full mb-1 w-40 bg-white rounded-xl shadow-lg ring-1 ring-slate-200/60 py-1.5 animate-fadeIn z-10">
-                    {languages.map((l) => (
-                      <button
-                        key={l.code}
-                        onClick={() => { setLang(l.code); setLangOpen(false); }}
-                        className={`w-full flex items-center gap-2 px-3 py-2 text-sm transition-colors ${
-                          lang === l.code
-                            ? 'bg-pink-50 text-pink-700 font-semibold'
-                            : 'text-slate-600 hover:bg-slate-50'
-                        }`}
-                      >
-                        <span>{l.flag}</span>
-                        <span className="flex-1 text-left">{l.full}</span>
-                        {lang === l.code && <Check className="w-3.5 h-3.5 text-pink-600" />}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <button
+                onClick={toggleLang}
+                aria-label={`Switch language (current: ${currentLang.full})`}
+                title={`Switch to ${lang === 'id' ? 'English' : 'Bahasa Indonesia'}`}
+                className="flex items-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-sm font-semibold text-slate-700 transition-colors"
+              >
+                <Globe className="w-4 h-4 text-slate-500" />
+                <span>{currentLang.flag} {currentLang.label}</span>
+              </button>
             </div>
           </div>
         </div>
