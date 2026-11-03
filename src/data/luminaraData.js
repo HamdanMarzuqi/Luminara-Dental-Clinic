@@ -1,19 +1,19 @@
 export const siteInfo = {
   id: {
     name: "Luminara Aesthetic Dental Clinic",
-    tagline: "Klinik Gigi Estetik & Spesialis Ortodonti",
-    description: "Luminara percaya bahwa perawatan gigi bukan sekedar keterampilan teknis, tetapi juga tentang menciptakan pengalaman yang nyaman, aman dan penuh kepercayaan.",
-    whatsappNumber: "62818478862",
-    whatsappUrl: "https://wa.me/62818478862?text=Halo%20Luminara%20Dental,%20saya%20ingin%20reservasi%20jadwal%20perawatan%20gigi",
+    tagline: "Comfort and Professionalism in Dentistry",
+    description: "merupakan klinik gigi estetik yang berlokasi di Kota Tanjung Pinang yang berkomitmen menghadirkan pengalaman perawatan gigi yang nyaman, aman, dan berkesan.",
+    whatsappNumber: "6281170076161",
+    whatsappUrl: "",
     phone: "0818478862",
-    email: "luminaradentalclinic@gmail.com",
-    instagram: "@luminara.dental",
-    instagramUrl: "https://www.instagram.com/luminara.dental/",
-    tiktok: "@luminaradentalofficial",
-    tiktokUrl: "https://www.tiktok.com/@luminaradentalofficial",
-    youtube: "luminaradentalofficial",
-    youtubeUrl: "https://www.youtube.com/@luminaradentalofficial",
-    address: "Jl. Kaliurang / Gejayan Area, Sleman, D.I. Yogyakarta",
+    email: "dentalluminara@gmail.com",
+    instagram: "@luminara_dental",
+    instagramUrl: "https://www.instagram.com/luminara_dental/",
+    tiktok: "",
+    tiktokUrl: "",
+    youtube: "",
+    youtubeUrl: "",
+    address: "Alamat : Jl. RH Fisabilillah No 3 dan 4 Batu 8 Atas RT 004, RW 011. Kelurahan Seijang, Bukit Bestari, Kota Tanjung Pinang, Kepulauan Riau (Ruko depan D Green City).",
     hours: "Senin - Sabtu: 08.00 - 21.00 WIB | Minggu: By Appointment"
   },
   en: {
@@ -78,23 +78,38 @@ export const coreValues = {
   id: [
     {
       icon: "HeartHandshake",
-      title: "Empati & Perhatian",
-      desc: "Setiap pasien diperlakukan dengan hangat, tanpa rasa takut, terutama pasien anak-anak dan yang memiliki trauma medis."
+      title: "Empati dalam Pelayanan",
+      desc: "Kami mendengarkan dan melayani dengan hati."
     },
     {
       icon: "ShieldCheck",
-      title: "Integritas & Transparansi",
-      desc: "Penjelasan tindakan yang detail dengan perbandingan sebelum & sesudah (before-after), tanpa biaya tersembunyi."
+      title: "Integritas Tanpa Kompromi",
+      desc: "Kami jujur, konsisten, dan bertanggung jawab."
     },
     {
       icon: "Sparkles",
-      title: "Teknologi Modern",
-      desc: "Menggunakan peralatan terkini dan teknik ortodonti canggih seperti Damon Self-Ligating System."
+      title: "Profesional dalam Tindakan",
+      desc: "Kami menjunjung tinggi standar medis dan etika."
     },
     {
       icon: "Smile",
-      title: "Ramah Anak & Keluarga",
-      desc: "Fasilitas lengkap dengan Mini Playground, suasana hangat, dan dokter spesialis anak berpengalaman."
+      title: "Kerja Tim yang Harmonis",
+      desc: "Kami bekerja sama untuk menciptakan lapangan kerja yang harmonis."
+    },
+    {
+      icon: "Smile",
+      title: "Tumbuh Bersama",
+      desc: "Kami belajar dan berkembang sebagai satu tim."
+    },
+    {
+      icon: "Smile",
+      title: "Estetika yang Bertanggung Jawab",
+      desc: "Kami memberikan perawatan estetika gigi yang aman, realistis, dan memuaskan."
+    },
+    {
+      icon: "Smile",
+      title: "Ramah dan Responsif",
+      desc: "Kami hadir untuk pasien, bukan hanya saat dibutuhkan."
     }
   ],
   en: [
@@ -125,7 +140,7 @@ export const treatments = {
   id: [
     {
       id: "behel-gigi",
-      name: "Behel Gigi (Orthodontics)",
+      name: "Konsultasi",
       category: "Ortodonti",
       badge: "Popular",
       desc: "Perawatan perataan gigi dengan behel konvensional maupun sistem Self-Ligating Damon untuk hasil rapi dan nyaman.",
@@ -133,7 +148,7 @@ export const treatments = {
     },
     {
       id: "scaling-gigi",
-      name: "Scaling Gigi",
+      name: "Penanganan Kegawatdaruratan gigi dan mulut",
       category: "Pembersihan",
       badge: "Esensial",
       desc: "Pembersihan karang gigi secara menyeluruh untuk mencegah radang gusi dan bau mulut.",
@@ -141,7 +156,7 @@ export const treatments = {
     },
     {
       id: "painless-scaling",
-      name: "Painless Scaling",
+      name: "Pembersihan karang gigi",
       category: "Pembersihan",
       badge: "Comfort",
       desc: "Teknologi scaling ekstra nyaman tanpa rasa sakit, ideal untuk pasien dengan tingkat sensitivitas tinggi.",
@@ -149,7 +164,7 @@ export const treatments = {
     },
     {
       id: "bleaching-gigi",
-      name: "Bleaching Gigi (Whitening)",
+      name: "Penambahan gigi estetik",
       category: "Estetika",
       badge: "Instant 9 Levels",
       desc: "Pemutihan gigi profesional yang dapat meningkatkan kecerahan gigi hingga 9 tingkat lebih putih dalam <1.5 jam.",
@@ -157,7 +172,7 @@ export const treatments = {
     },
     {
       id: "direct-veneer",
-      name: "Direct Veneer Estetik",
+      name: "Perawatan saluran akar",
       category: "Estetika",
       badge: "Makeover",
       desc: "Tambal gigi estetik untuk memperbaiki bentuk, warna, dan celah antar gigi agar senyum terlihat lebih simetris.",
@@ -165,7 +180,7 @@ export const treatments = {
     },
     {
       id: "tambal-gigi",
-      name: "Tambal Gigi Komposit",
+      name: "Pencabutan gigi dewasa dan anak",
       category: "Restorasi",
       badge: "Perbaikan",
       desc: "Penambalan gigi berlubang menggunakan bahan komposit warna alami sewarna gigi asli.",
@@ -173,7 +188,7 @@ export const treatments = {
     },
     {
       id: "crown-mahkota",
-      name: "Crown & Bridge (Gigi Tiruan)",
+      name: "Perawatan Periodontal",
       category: "Restorasi",
       badge: "Permanen",
       desc: "Pemasangan mahkota jaket dan jembatan gigi estetik untuk menggantikan gigi yang rusak berat atau hilang.",
@@ -181,7 +196,31 @@ export const treatments = {
     },
     {
       id: "perawatan-gigi-anak",
-      name: "Perawatan Gigi Anak & Pedodonti",
+      name: "Perawatan Gigi Tiruan",
+      category: "Gigi Anak",
+      badge: "Kids Friendly",
+      desc: "Perawatan gigi anak dengan pendekatan fun, dokter ramah anak, dan penanganan khusus ABK / ADHD.",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "perawatan-gigi-anak",
+      name: "Perawatan kawat gigi",
+      category: "Gigi Anak",
+      badge: "Kids Friendly",
+      desc: "Perawatan gigi anak dengan pendekatan fun, dokter ramah anak, dan penanganan khusus ABK / ADHD.",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "perawatan-gigi-anak",
+      name: "Perawatan pencegahan kerusakan gigi anak",
+      category: "Gigi Anak",
+      badge: "Kids Friendly",
+      desc: "Perawatan gigi anak dengan pendekatan fun, dokter ramah anak, dan penanganan khusus ABK / ADHD.",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "perawatan-gigi-anak",
+      name: "Perawatan pemutihan gigi",
       category: "Gigi Anak",
       badge: "Kids Friendly",
       desc: "Perawatan gigi anak dengan pendekatan fun, dokter ramah anak, dan penanganan khusus ABK / ADHD.",

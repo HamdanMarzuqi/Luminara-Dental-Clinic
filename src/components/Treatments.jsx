@@ -20,14 +20,14 @@ export default function Treatments({ onOpenBooking }) {
     : [ALL_KEY, 'Ortodonti', 'Pembersihan', 'Estetika', 'Restorasi', 'Gigi Anak'];
   const categoryLabels = { [ALL_KEY]: isEn ? 'All' : 'Semua' };
 
-  const filteredTreatments = selectedCategory === ALL_KEY 
-    ? currentTreatments 
+  const filteredTreatments = selectedCategory === ALL_KEY
+    ? currentTreatments
     : currentTreatments.filter(t => t.category === selectedCategory);
 
   return (
     <section id="perawatan" className="py-20 bg-slate-50 border-y border-slate-200/60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -42,7 +42,7 @@ export default function Treatments({ onOpenBooking }) {
             <p className="text-slate-600 text-base sm:text-lg">
               {isEn
                 ? 'From orthodontic braces, painless scaling, aesthetic teeth whitening, to specialized pediatric dentistry.'
-                : 'Dari perawatan behel ortodonti, pembersihan karang gigi tanpa rasa sakit, bleaching estetika, hingga perawatan khusus anak-anak.'
+                : 'Kami berkomitmen untuk memberikan pelayanan yang terbaik kepada Masyarakat umum, khususnya di Tanjung Pinang dengan memberikan berbagai layanan. Pelayanan ini tentunya diberikan kepada Masyarakat oleh tim terbaik yang kami miliki.'
               }
             </p>
           </div>
@@ -55,11 +55,10 @@ export default function Treatments({ onOpenBooking }) {
               <button
                 key={idx}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${
-                  selectedCategory === cat
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${selectedCategory === cat
                     ? 'bg-pink-600 text-white shadow-md shadow-pink-600/25 scale-105'
                     : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-                }`}
+                  }`}
               >
                 {categoryLabels[cat] || cat}
               </button>
@@ -83,12 +82,12 @@ export default function Treatments({ onOpenBooking }) {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                  
+
                   {/* Badge */}
                   <span className="absolute top-3 right-3 bg-pink-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
                     {item.badge}
                   </span>
-                  
+
                   <span className="absolute bottom-3 left-3 text-white text-xs font-semibold px-2.5 py-0.5 rounded-md bg-white/20 backdrop-blur-md border border-white/30">
                     {item.category}
                   </span>
@@ -129,7 +128,7 @@ export default function Treatments({ onOpenBooking }) {
 
         {/* Treatment Detail Modal */}
         {activeModal && (
-          <div 
+          <div
             onClick={(e) => e.target === e.currentTarget && setActiveModal(null)}
             className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-slate-900/70 backdrop-blur-sm animate-fadeIn overflow-y-auto"
           >

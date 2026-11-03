@@ -19,7 +19,7 @@ export default function WhyUs() {
   return (
     <section id="tentang-kami" className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div id="profil" className="text-center max-w-3xl mx-auto space-y-4">
@@ -34,7 +34,7 @@ export default function WhyUs() {
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               {isEn
                 ? 'We are committed to being your trusted partner in maintaining dental health through transparent communication, high professionalism, and a warm clinic environment.'
-                : 'Kami berkomitmen menjadi mitra terpercaya dalam menjaga kesehatan gigi Anda dengan mengedepankan komunikasi, menjunjung tinggi profesionalisme, dan menciptakan suasana klinik yang ramah.'
+                : 'Luminara Dental merupakan klinik gigi estetik yang berlokasi di Kota Tanjung Pinang. Didirikan pada Oktober 2025, Luminara hadir untuk memberikan layanan kesehatan gigi dan mulut secara holistik, modern, dan berbasis standar kedokteran gigi terkini. Dengan menggabungkan sentuhan personal dan teknologi mutakhir, kami berkomitmen menghadirkan pengalaman perawatan gigi yang nyaman, aman, dan berkesan.'
               }
             </p>
           </div>
@@ -46,7 +46,7 @@ export default function WhyUs() {
             const IconComponent = iconMap[item.icon] || Sparkles;
             return (
               <ScrollReveal key={idx} delay={idx * 120} direction="up">
-                <div 
+                <div
                   className="group relative bg-slate-50 hover:bg-gradient-to-b hover:from-pink-500 hover:to-fuchsia-600 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1.5 border border-slate-100 h-full flex flex-col justify-between"
                 >
                   <div>
@@ -69,7 +69,7 @@ export default function WhyUs() {
         {/* Philosophy & Facility Highlight Banner */}
         <ScrollReveal delay={200} direction="scale">
           <div id="filosofi" className="mt-16 bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-            
+
             <div className="absolute top-0 right-0 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -78,8 +78,8 @@ export default function WhyUs() {
                   {isEn ? 'Luminara Service Philosophy' : 'Filosofi Pelayanan Luminara'}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-                  {isEn 
-                    ? '"Patient Health & Trust Is Our Utmost Priority"' 
+                  {isEn
+                    ? '"Patient Health & Trust Is Our Utmost Priority"'
                     : '"Kesehatan & Kepercayaan Pasien Adalah Prioritas Utama Kami"'
                   }
                 </h3>
@@ -104,7 +104,7 @@ export default function WhyUs() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="lg:col-span-4 flex justify-center">
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl text-center space-y-2 max-w-xs w-full">
                   <div className="text-4xl font-extrabold text-pink-400">90.9%</div>

@@ -18,10 +18,10 @@ export default function Footer() {
           {/* Brand Info & Address Column */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#beranda" className="inline-block group">
-              <img 
-                src="/luminara-logo-white.svg" 
-                alt="Luminara Aesthetic Dental Clinic" 
-                className="h-11 sm:h-12 w-auto group-hover:scale-105 transition-transform duration-300"
+              <img
+                src="/luminara-logo-white.png"
+                alt="Luminara Aesthetic Dental Clinic"
+                className="h-16 sm:h-20 w-auto group-hover:scale-105 transition-transform duration-300"
               />
             </a>
 
@@ -113,7 +113,7 @@ export default function Footer() {
             <div className="rounded-2xl overflow-hidden border border-slate-800 shadow-lg h-36 bg-slate-900 relative group">
               <iframe
                 title="Luminara Dental Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126499.76176505676!2d110.3340578!3d-7.7554907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599bd35e07bd%3A0x6b30c14b2d56a31c!2sYogyakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3304283329576!2d104.47991139999999!3d0.8960399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d96d0059809147%3A0x52ef0ceb85fd0ba2!2sLuminara%20Dental%20Tanjungpinang!5e0!3m2!1sid!2sid!4v1793674608111!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -125,7 +125,7 @@ export default function Footer() {
               />
             </div>
             <a
-              href="https://maps.google.com/?q=Luminara+Dental+Yogyakarta"
+              href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3304283329576!2d104.47991139999999!3d0.8960399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d96d0059809147%3A0x52ef0ceb85fd0ba2!2sLuminara%20Dental%20Tanjungpinang!5e0!3m2!1sid!2sid!4v1793674608111!5m2!1sid!2sid"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-pink-400 hover:text-pink-300 font-semibold"
@@ -148,6 +148,6 @@ export default function Footer() {
         </div>
 
       </div>
-    </footer>
+    </footer >
   );
 }

@@ -50,18 +50,17 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5' : 'bg-white/80 backdrop-blur-sm py-3.5 border-b border-pink-100/60'
-    }`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5' : 'bg-white/80 backdrop-blur-sm py-3.5 border-b border-pink-100/60'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
 
           {/* Brand Logo */}
           <a href="#beranda" className="flex items-center group shrink-0">
             <img
-              src="/luminara-logo.svg"
+              src="/luminara-logo.png"
               alt="Luminara Aesthetic Dental Clinic"
-              className="h-9 sm:h-11 w-auto group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
+              className="h-11 sm:h-12 w-auto group-hover:scale-105 transition-transform duration-300 drop-shadow-sm"
             />
           </a>
 
@@ -146,19 +145,16 @@ export default function Navbar({ onOpenBooking }) {
             >
               <span className="relative flex h-5 w-6 flex-col justify-between">
                 <span
-                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out origin-center ${
-                    mobileMenuOpen ? 'translate-y-2.25 rotate-45' : ''
-                  }`}
+                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out origin-center ${mobileMenuOpen ? 'translate-y-2.25 rotate-45' : ''
+                    }`}
                 />
                 <span
-                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out ${
-                    mobileMenuOpen ? 'scale-x-0 opacity-0' : 'scale-x-100 opacity-100'
-                  }`}
+                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'scale-x-0 opacity-0' : 'scale-x-100 opacity-100'
+                    }`}
                 />
                 <span
-                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out origin-center ${
-                    mobileMenuOpen ? '-translate-y-2.25 -rotate-45' : ''
-                  }`}
+                  className={`block h-0.5 w-full rounded-full bg-current transition-all duration-300 ease-in-out origin-center ${mobileMenuOpen ? '-translate-y-2.25 -rotate-45' : ''
+                    }`}
                 />
               </span>
             </button>
@@ -169,9 +165,8 @@ export default function Navbar({ onOpenBooking }) {
       {/* Mobile Drawer Navigation — height/opacity transition via CSS grid trick (no JS height measuring needed) */}
       <div
         id="mobile-nav-drawer"
-        className={`md:hidden grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
-          mobileMenuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-        }`}
+        className={`md:hidden grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${mobileMenuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+          }`}
       >
         <div className="overflow-hidden">
           <div className="bg-white border-b border-slate-100 shadow-xl px-4 pt-3 pb-6 space-y-1">

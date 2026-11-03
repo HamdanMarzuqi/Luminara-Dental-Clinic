@@ -32,29 +32,29 @@ export default function Hero({ onOpenBooking }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Hero Text Column */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
+
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 border border-pink-200 text-pink-800 text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
               <Sparkles className="w-4 h-4 text-pink-600 animate-pulse" />
-              <span>{isEn ? 'Orthodontics & Aesthetic Dentistry Specialist Yogyakarta' : 'Spesialis Ortodonti & Estetika Gigi Yogyakarta'}</span>
+              <span>{isEn ? 'Orthodontics & Aesthetic Dentistry Specialist Yogyakarta' : 'Spesialis Ortodonti & Estetika Gigi Tanjung Pinang'}</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-              {isEn ? 'Caring for Your Healthy Smile with ' : 'Merawat Senyum Sehat Anda dengan '}
+              {isEn ? 'Caring for Your Healthy Smile with ' : 'A Family-Friendly '}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600">
-                {isEn ? 'All Our Heart' : 'Sepenuh Hati'}
+                {isEn ? 'All Our Heart' : 'Dental Clinic'}
               </span>
             </h1>
 
             {/* Sub-headline Paragraph */}
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              {isEn 
+              {isEn
                 ? 'Luminara believes dental care is not just technical skill, but about creating a comfortable, safe, and painless experience. Supported by family-friendly specialists & modern facilities.'
-                : 'Luminara percaya bahwa perawatan gigi bukan sekedar keterampilan teknis, melainkan tentang menciptakan pengalaman yang nyaman, aman, dan tanpa rasa sakit. Didukung tim dokter spesialis ramah keluarga & fasilitas modern.'
+                : 'Comfort and Professionalism in Dentistry.'
               }
             </p>
 
@@ -117,26 +117,26 @@ export default function Hero({ onOpenBooking }) {
           {/* Right Hero Image Card Column */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+
               {/* Main Clinic Image Frame */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=900&auto=format&fit=crop"
+                  src="/foto_drg_anne.jpeg"
                   alt="Luminara Dental Treatment Room"
-                  className="w-full h-[420px] sm:h-[480px] object-cover"
+                  className="w-full h-[420px] sm:h-[480px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
-                
+
                 {/* Floating Patient Review Badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/40 shadow-xl space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900 text-sm">Demi Langston</span>
-                    <span className="text-xs bg-pink-100 text-pink-800 font-semibold px-2 py-0.5 rounded-full">Influencer</span>
+                    <span className="font-bold text-slate-900 text-sm"> drg. Anne Shinta Rufaeda</span>
+                    <span className="text-xs bg-pink-100 text-pink-800 font-semibold px-2 py-0.5 rounded-full">Founder</span>
                   </div>
                   <p className="text-xs text-slate-600 line-clamp-2">
-                    {isEn 
+                    {isEn
                       ? '"Treatments at Luminara Dental are so comfortable and painless. The doctors are friendly and informative!"'
-                      : '"Treatment di Luminara Dental benar-benar nyaman dan tanpa rasa sakit. Dokternya ramah dan informatif!"'
+                      : '"Klinik ini didirikan oleh drg. Anne Shinta Rufaeda, lulusan Fakultas Kedokteran Gigi Universitas Gadjah Mada, yang telah memiliki pengalaman lebih dari 12 tahun dalam praktik klinis. Meski terbilang baru, Luminara dibangun di atas pondasi nilai profesionalisme, empati, dan pembelajaran berkelanjutan. Dengan tim yang solid dan sistem yang terstruktur, kami terus berinovasi menghadirkan pelayanan gigi terbaik untuk masyarakat."'
                     }
                   </p>
                 </div>
