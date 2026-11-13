@@ -5,32 +5,32 @@ export const siteInfo = {
     description: "merupakan klinik gigi estetik yang berlokasi di Kota Tanjung Pinang yang berkomitmen menghadirkan pengalaman perawatan gigi yang nyaman, aman, dan berkesan.",
     whatsappNumber: "6281170076161",
     whatsappUrl: "",
-    phone: "0818478862",
+    phone: "0811-7007-6161",
     email: "dentalluminara@gmail.com",
     instagram: "@luminara_dental",
     instagramUrl: "https://www.instagram.com/luminara_dental/",
-    tiktok: "",
-    tiktokUrl: "",
-    youtube: "",
-    youtubeUrl: "",
+    tiktok: "@luminaradentalofficial",
+    tiktokUrl: "https://www.tiktok.com/@luminaradentalofficial",
+    youtube: "luminaradentalofficial",
+    youtubeUrl: "https://www.youtube.com/@luminaradentalofficial",
     address: "Alamat : Jl. RH Fisabilillah No 3 dan 4 Batu 8 Atas RT 004, RW 011. Kelurahan Seijang, Bukit Bestari, Kota Tanjung Pinang, Kepulauan Riau (Ruko depan D Green City).",
     hours: "Senin - Sabtu: 08.00 - 21.00 WIB | Minggu: By Appointment"
   },
   en: {
     name: "Luminara Aesthetic Dental Clinic",
-    tagline: "Aesthetic Dental Clinic & Orthodontic Specialist",
-    description: "Luminara believes dental care is not just technical expertise, but also about creating a comfortable, safe, and trustworthy experience.",
-    whatsappNumber: "62818478862",
-    whatsappUrl: "https://wa.me/62818478862?text=Hello%20Luminara%20Dental,%20I%20would%20like%20to%20book%20an%20appointment",
-    phone: "0818478862",
-    email: "luminaradentalclinic@gmail.com",
-    instagram: "@luminara.dental",
-    instagramUrl: "https://www.instagram.com/luminara.dental/",
+    tagline: "Comfort and Professionalism in Dentistry",
+    description: "an aesthetic dental clinic located in Tanjung Pinang City, committed to delivering a comfortable, safe, and memorable dental care experience.",
+    whatsappNumber: "6281170076161",
+    whatsappUrl: "",
+    phone: "0811-7007-6161",
+    email: "dentalluminara@gmail.com",
+    instagram: "@luminara_dental",
+    instagramUrl: "https://www.instagram.com/luminara_dental/",
     tiktok: "@luminaradentalofficial",
     tiktokUrl: "https://www.tiktok.com/@luminaradentalofficial",
     youtube: "luminaradentalofficial",
     youtubeUrl: "https://www.youtube.com/@luminaradentalofficial",
-    address: "Jl. Kaliurang / Gejayan Area, Sleman, D.I. Yogyakarta",
+    address: "Address: Jl. RH Fisabilillah No 3 dan 4 Batu 8 Atas RT 004, RW 011. Kelurahan Seijang, Bukit Bestari, Tanjung Pinang, Kepulauan Riau (shophouse in front of D Green City).",
     hours: "Monday - Saturday: 08:00 - 21:00 WIB | Sunday: By Appointment"
   }
 };
@@ -115,23 +115,38 @@ export const coreValues = {
   en: [
     {
       icon: "HeartHandshake",
-      title: "Empathy & Care",
-      desc: "Every patient is treated with warmth and without fear, especially children and patients with medical anxiety."
+      title: "Empathy in Service",
+      desc: "We listen and serve with heart."
     },
     {
       icon: "ShieldCheck",
-      title: "Integrity & Transparency",
-      desc: "Detailed explanations of procedures with before-and-after comparisons, with no hidden costs."
+      title: "Uncompromising Integrity",
+      desc: "We are honest, consistent, and accountable."
     },
     {
       icon: "Sparkles",
-      title: "Modern Technology",
-      desc: "Utilizing state-of-the-art equipment and advanced orthodontic techniques like Damon Self-Ligating System."
+      title: "Professional in Practice",
+      desc: "We uphold the highest medical standards and ethics."
     },
     {
       icon: "Smile",
-      title: "Kids & Family Friendly",
-      desc: "Fully equipped with a Mini Playground, a warm welcoming vibe, and experienced pediatric dental specialists."
+      title: "Harmonious Teamwork",
+      desc: "We work together to create a harmonious workplace."
+    },
+    {
+      icon: "Smile",
+      title: "Growing Together",
+      desc: "We learn and grow as one team."
+    },
+    {
+      icon: "Smile",
+      title: "Responsible Aesthetics",
+      desc: "We deliver aesthetic dental care that is safe, realistic, and satisfying."
+    },
+    {
+      icon: "Smile",
+      title: "Friendly & Responsive",
+      desc: "We are here for patients, not only when needed."
     }
   ]
 };
@@ -203,7 +218,7 @@ export const treatments = {
       image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
     },
     {
-      id: "perawatan-gigi-anak",
+      id: "perawatan-kawat-gigi",
       name: "Perawatan kawat gigi",
       category: "Gigi Anak",
       badge: "Kids Friendly",
@@ -211,7 +226,7 @@ export const treatments = {
       image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
     },
     {
-      id: "perawatan-gigi-anak",
+      id: "pencegahan-gigi-anak",
       name: "Perawatan pencegahan kerusakan gigi anak",
       category: "Gigi Anak",
       badge: "Kids Friendly",
@@ -219,7 +234,7 @@ export const treatments = {
       image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
     },
     {
-      id: "perawatan-gigi-anak",
+      id: "pemutihan-gigi-anak",
       name: "Perawatan pemutihan gigi",
       category: "Gigi Anak",
       badge: "Kids Friendly",
@@ -233,63 +248,87 @@ export const treatments = {
       name: "Dental Braces (Orthodontics)",
       category: "Orthodontics",
       badge: "Popular",
-      desc: "Teeth alignment treatment with conventional braces or Self-Ligating Damon system for neat, comfortable results.",
+      desc: "Teeth alignment treatment with conventional braces or the Self-Ligating Damon system for neat and comfortable results.",
       image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "scaling-gigi",
-      name: "Teeth Scaling",
+      name: "Dental & Oral Emergency Care",
       category: "Cleaning",
       badge: "Essential",
-      desc: "Thorough calculus removal to prevent gum disease and bad breath.",
+      desc: "Thorough calculus removal to prevent gum inflammation and bad breath.",
       image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "painless-scaling",
-      name: "Painless Scaling",
+      name: "Teeth Scaling",
       category: "Cleaning",
       badge: "Comfort",
-      desc: "Extra comfortable scaling technology with zero pain, ideal for patients with high tooth sensitivity.",
+      desc: "Extra comfortable, painless scaling technology, ideal for patients with high sensitivity.",
       image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "bleaching-gigi",
-      name: "Teeth Bleaching (Whitening)",
+      name: "Aesthetic Tooth Addition",
       category: "Aesthetics",
       badge: "Instant 9 Levels",
-      desc: "Professional teeth whitening that brightens teeth up to 9 shades whiter in under 1.5 hours.",
+      desc: "Professional teeth whitening that can brighten teeth up to 9 shades whiter in under 1.5 hours.",
       image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "direct-veneer",
-      name: "Direct Aesthetic Veneers",
+      name: "Root Canal Treatment",
       category: "Aesthetics",
       badge: "Makeover",
-      desc: "Aesthetic tooth bonding to fix shape, color, and gaps for a symmetrical, radiant smile.",
+      desc: "Aesthetic bonding to fix the shape, color, and gaps between teeth so the smile looks more symmetrical.",
       image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "tambal-gigi",
-      name: "Composite Dental Fillings",
+      name: "Adult & Pediatric Tooth Extraction",
       category: "Restoration",
       badge: "Repair",
-      desc: "Tooth cavity filling using natural tooth-colored composite resin.",
+      desc: "Filling cavities using natural tooth-colored composite material that matches your own teeth.",
       image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "crown-mahkota",
-      name: "Crown & Bridge (Prosthodontics)",
+      name: "Periodontal Treatment",
       category: "Restoration",
       badge: "Permanent",
-      desc: "Aesthetic jacket crowns and dental bridges to replace heavily damaged or missing teeth.",
+      desc: "Placement of aesthetic jacket crowns and dental bridges to replace heavily damaged or missing teeth.",
       image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop"
     },
     {
       id: "perawatan-gigi-anak",
-      name: "Pediatric Dental Care",
+      name: "Denture Care",
       category: "Pediatric",
       badge: "Kids Friendly",
-      desc: "Fun children's dental care with kid-friendly doctors and specialized care for special needs (ADHD / Autism).",
+      desc: "Children's dental care with a fun approach, kid-friendly doctors, and special handling for special needs (ABK / ADHD).",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "perawatan-kawat-gigi",
+      name: "Orthodontic Treatment",
+      category: "Pediatric",
+      badge: "Kids Friendly",
+      desc: "Children's dental care with a fun approach, kid-friendly doctors, and special handling for special needs (ABK / ADHD).",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "pencegahan-gigi-anak",
+      name: "Pediatric Caries Prevention",
+      category: "Pediatric",
+      badge: "Kids Friendly",
+      desc: "Children's dental care with a fun approach, kid-friendly doctors, and special handling for special needs (ABK / ADHD).",
+      image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      id: "pemutihan-gigi-anak",
+      name: "Teeth Whitening",
+      category: "Pediatric",
+      badge: "Kids Friendly",
+      desc: "Children's dental care with a fun approach, kid-friendly doctors, and special handling for special needs (ABK / ADHD).",
       image: "https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=800&auto=format&fit=crop"
     }
   ]
@@ -354,8 +393,8 @@ export const testimonials = {
       rating: 5
     },
     {
-      name: "Demi Langston",
-      title: "Influencer",
+      name: "drg. Anne Shinta Rufaeda",
+      title: "Founder",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
       text: "Aku datang ke Luminara Dental untuk treatment lengkap: bleaching, pembersihan karang gigi, dan perbaikan veneer gigi depan. Jujur sebelumnya aku takut ke dokter gigi karena trauma sakit. Tapi di sini, semua treatment nyaman tanpa rasa sakit!",
       rating: 5
@@ -371,7 +410,7 @@ export const testimonials = {
       name: "Adityalogy",
       title: "Content Creator & Musisi",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-      text: "Baru aja selesai scaling di Luminara Dental! Kliniknya super kids friendly, ruang tindakannya punya suasana hangat dan nyaman. Hasil scaling-nya juga rapi dan bersih banget. Buat warga Jogja, wajib coba ke sini!",
+      text: "Baru aja selesai scaling di Luminara Dental! Kliniknya super kids friendly, ruang tindakannya punya suasana hangat dan nyaman. Hasil scaling-nya juga rapi dan bersih banget. Buat warga Tanjung Pinang, wajib coba ke sini!",
       rating: 5
     },
     {
@@ -398,8 +437,8 @@ export const testimonials = {
       rating: 5
     },
     {
-      name: "Demi Langston",
-      title: "Influencer",
+      name: "drg. Anne Shinta Rufaeda",
+      title: "Founder",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
       text: "I came to Luminara Dental for a full treatment: bleaching, scaling, and veneer touch-up. I used to be terrified of dentists due to pain trauma, but here everything was completely painless!",
       rating: 5
@@ -415,7 +454,7 @@ export const testimonials = {
       name: "Adityalogy",
       title: "Content Creator & Musician",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-      text: "Just finished scaling at Luminara Dental! Super kid-friendly, cozy treatment rooms, and brilliant scaling results. Highly recommended for everyone in Jogja!",
+      text: "Just finished scaling at Luminara Dental! Super kid-friendly, cozy treatment rooms, and brilliant scaling results. Highly recommended for everyone in Tanjung Pinang!",
       rating: 5
     },
     {
@@ -500,7 +539,7 @@ export const faqs = {
   id: [
     {
       question: "Apakah perlu reservasi terlebih dahulu untuk perawatan di Luminara Dental?",
-      answer: "Kami sangat menyarankan Sahabat Luminara untuk melakukan reservasi terlebih dahulu agar tidak menunggu lama di lokasi. Reservasi dapat dilakukan dengan mudah via WhatsApp kami atau DM Instagram @luminara.dental."
+      answer: "Kami sangat menyarankan Sahabat Luminara untuk melakukan reservasi terlebih dahulu agar tidak menunggu lama di lokasi. Reservasi dapat dilakukan dengan mudah via WhatsApp kami atau DM Instagram @luminara_dental."
     },
     {
       question: "Apakah bisa pasang behel dalam 1 kali kunjungan saja?",
@@ -518,7 +557,7 @@ export const faqs = {
   en: [
     {
       question: "Is an advance reservation required for treatment at Luminara Dental?",
-      answer: "We highly recommend making a reservation in advance to avoid long wait times. Reservations can be made easily via WhatsApp or Instagram DM @luminara.dental."
+      answer: "We highly recommend making a reservation in advance to avoid long wait times. Reservations can be made easily via WhatsApp or Instagram DM @luminara_dental."
     },
     {
       question: "Can I get braces installed in a single visit?",

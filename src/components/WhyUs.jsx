@@ -33,7 +33,7 @@ export default function WhyUs() {
             </h2>
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
               {isEn
-                ? 'We are committed to being your trusted partner in maintaining dental health through transparent communication, high professionalism, and a warm clinic environment.'
+                ? 'Luminara Dental is an aesthetic dental clinic located in Tanjung Pinang City. Founded in October 2025, Luminara was created to provide holistic, modern oral and dental care grounded in the latest dental standards. By combining a personal touch with cutting-edge technology, we are committed to delivering a comfortable, safe, and memorable dental care experience.'
                 : 'Luminara Dental merupakan klinik gigi estetik yang berlokasi di Kota Tanjung Pinang. Didirikan pada Oktober 2025, Luminara hadir untuk memberikan layanan kesehatan gigi dan mulut secara holistik, modern, dan berbasis standar kedokteran gigi terkini. Dengan menggabungkan sentuhan personal dan teknologi mutakhir, kami berkomitmen menghadirkan pengalaman perawatan gigi yang nyaman, aman, dan berkesan.'
               }
             </p>
@@ -86,7 +86,7 @@ export default function WhyUs() {
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                   {isEn
                     ? 'As an aesthetic dental clinic focused on orthodontic excellence, we provide modern technology-driven care directly performed by specialist dentists. Every procedure is explained transparently so you feel safe from start to finish.'
-                    : 'Sebagai klinik gigi estetik berfokus pada keunggulan ortodonti & estetika, kami menghadirkan pelayanan berbasis teknologi modern yang ditangani langsung oleh tim dokter spesialis. Setiap prosedur dijelaskan secara terbuka sehingga Anda merasa aman dari awal hingga selesai.'
+                    : 'Sebagai klinik gigi yang berfokus pada keunggulan estetika gigi, kami menghadirkan pelayanan berbasis teknologi modern yang ditangani langsung oleh tim dokter gigi spesialis & dokter gigi umum berpengalaman. Setiap prosedur dijelaskan secara terbuka sehingga Anda merasa aman dari awal hingga selesai.'
                   }
                 </p>
                 <div className="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm text-pink-200">
@@ -107,9 +107,9 @@ export default function WhyUs() {
 
               <div className="lg:col-span-4 flex justify-center">
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl text-center space-y-2 max-w-xs w-full">
-                  <div className="text-4xl font-extrabold text-pink-400">90.9%</div>
-                  <div className="text-sm font-semibold text-slate-200">{isEn ? 'Accuracy & Satisfaction' : 'Akurasi & Kepuasan Pasien'}</div>
-                  <div className="text-xs text-slate-400">{isEn ? 'Based on hundreds of patient reviews in Jogja' : 'Berdasarkan ulasan ratusan pasien ortodonti & perbaikan gigi di Jogja'}</div>
+                  <div className="text-4xl font-extrabold text-pink-400">100%</div>
+                  <div className="text-sm font-semibold text-slate-200">{isEn ? 'Accuracy & Satisfaction' : 'Rating & Kepuasan Pasien'}</div>
+                  <div className="text-xs text-slate-400">{isEn ? 'Based on reviews & ratings from 330+ Luminara Dental Clinic Tanjung Pinang patients on Google Maps' : 'Berdasarkan ulasan & rating 330+ pasien Luminara Dental Clinic Tanjung Pinang di Google Maps'}</div>
                 </div>
               </div>
             </div>

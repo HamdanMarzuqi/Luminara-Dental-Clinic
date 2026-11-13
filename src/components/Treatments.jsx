@@ -142,7 +142,7 @@ export default function Treatments({ onOpenBooking }) {
               <button
                 type="button"
                 onClick={() => setActiveModal(null)}
-                aria-label="Tutup Modal"
+                aria-label={isEn ? 'Close Modal' : 'Tutup Modal'}
                 className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-8 h-8 rounded-full bg-slate-900/50 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-md transition-colors"
               >
                 <X className="w-4 h-4 sm:w-5 sm:h-5" />

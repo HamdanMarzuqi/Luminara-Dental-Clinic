@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-pink-400 flex-shrink-0" />
-                <span>WA / Telp: {currentSiteInfo.phone}</span>
+                <span>{isEn ? 'WA / Phone' : 'WA / Telp'}: {currentSiteInfo.phone}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-pink-400 flex-shrink-0" />
@@ -98,12 +98,11 @@ export default function Footer() {
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Popular Services' : 'Perawatan Populer'}</h4>
             <ul className="space-y-2 text-xs text-slate-400">
-              <li>{isEn ? 'Damon Self-Ligating Braces' : 'Behel Gigi Damon Self Ligating'}</li>
-              <li>{isEn ? 'Painless Teeth Scaling' : 'Painless Scaling (Pembersihan Karang)'}</li>
-              <li>{isEn ? 'Instant Whitening (9 Shades)' : 'Bleaching Gigi (Pemutihan 9 Tingkat)'}</li>
-              <li>{isEn ? 'Direct Aesthetic Veneers' : 'Direct Veneer Estetik'}</li>
-              <li>{isEn ? 'Pediatric & Special Needs Care' : 'Perawatan Gigi Anak & ABK'}</li>
-              <li>{isEn ? 'Dental Crown & Restoration' : 'Crown & Restorasi Gigi'}</li>
+              <li>{isEn ? 'Teeth Bleaching' : 'Bleaching Gigi'}</li>
+              <li>{isEn ? 'Direct Veneer' : 'Direct Veneer'}</li>
+              <li>{isEn ? 'Pediatric Dental Care' : 'Perawatan Gigi Anak'}</li>
+              <li>{isEn ? 'Crown & Dental Restoration' : 'Crown & Restorasi Gigi'}</li>
+              <li>{isEn ? 'Aesthetic Dental Care' : 'Perawatan Gigi Aestetik'}</li>
             </ul>
           </div>
 
@@ -120,12 +119,11 @@ export default function Footer() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                sandbox="allow-scripts allow-same-origin"
                 className="grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
               />
             </div>
             <a
-              href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3304283329576!2d104.47991139999999!3d0.8960399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d96d0059809147%3A0x52ef0ceb85fd0ba2!2sLuminara%20Dental%20Tanjungpinang!5e0!3m2!1sid!2sid!4v1793674608111!5m2!1sid!2sid"
+              href="https://www.google.com/maps/search/?api=1&query=0.8960399,104.4799114"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-pink-400 hover:text-pink-300 font-semibold"

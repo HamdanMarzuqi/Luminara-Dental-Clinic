@@ -102,7 +102,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
           <button
             type="button"
             onClick={onClose}
-            aria-label="Tutup Modal"
+            aria-label={isEn ? 'Close Modal' : 'Tutup Modal'}
             className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 text-white flex items-center justify-center backdrop-blur-md transition-colors z-10 focus:outline-none focus:ring-2 focus:ring-white/50"
           >
             <X className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -150,7 +150,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
               <input
                 type="tel"
                 required
-                placeholder="Contoh: 081234567890"
+                placeholder={isEn ? 'e.g. 081234567890' : 'Contoh: 081234567890'}
                 value={formData.phone}
                 onChange={handlePhoneChange}
                 className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
@@ -181,9 +181,9 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
               <option value={isEn ? "General Consultation / Check-up" : "Konsultasi Umum / Check-up"}>{isEn ? "General Consultation / Check-up" : "Konsultasi Umum / Check-up"}</option>
               <option value={isEn ? "Dental Braces (Orthodontics)" : "Behel Gigi (Orthodontics)"}>{isEn ? "Dental Braces (Orthodontics)" : "Behel Gigi (Orthodontics)"}</option>
               <option value={isEn ? "Teeth Scaling" : "Scaling Gigi (Pembersihan Karang)"}>{isEn ? "Teeth Scaling" : "Scaling Gigi (Pembersihan Karang)"}</option>
-              <option value="Painless Scaling">Painless Scaling</option>
+              <option value={isEn ? "Painless Scaling" : "Pembersihan Karang Gigi"}>{isEn ? "Painless Scaling" : "Pembersihan Karang Gigi"}</option>
               <option value={isEn ? "Teeth Bleaching (Whitening)" : "Bleaching Gigi (Whitening)"}>{isEn ? "Teeth Bleaching (Whitening)" : "Bleaching Gigi (Whitening)"}</option>
-              <option value="Direct Veneer Estetik">Direct Veneer Estetik</option>
+              <option value={isEn ? "Aesthetic Direct Veneer" : "Direct Veneer Estetik"}>{isEn ? "Aesthetic Direct Veneer" : "Direct Veneer Estetik"}</option>
               <option value={isEn ? "Composite Dental Fillings" : "Tambal Gigi Komposit"}>{isEn ? "Composite Dental Fillings" : "Tambal Gigi Komposit"}</option>
               <option value={isEn ? "Pediatric Dentistry" : "Perawatan Gigi Anak / ABK"}>{isEn ? "Pediatric Dentistry" : "Perawatan Gigi Anak / ABK"}</option>
               <option value={isEn ? "Crown & Bridge" : "Crown / Gigi Tiruan"}>{isEn ? "Crown & Bridge" : "Crown / Gigi Tiruan"}</option>
