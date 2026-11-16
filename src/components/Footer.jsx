@@ -55,7 +55,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Luminara Dental"
-                className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
+                className="w-11 h-11 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
               >
                 <FaInstagram className="w-4 h-4" />
               </a>
@@ -64,7 +64,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok Luminara Dental"
-                className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
+                className="w-11 h-11 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
               >
                 <FaTiktok className="w-4 h-4" />
               </a>
@@ -73,7 +73,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube Luminara Dental"
-                className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
+                className="w-11 h-11 rounded-xl bg-slate-900 hover:bg-pink-600 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
               >
                 <FaYoutube className="w-4 h-4" />
               </a>
@@ -82,21 +82,21 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Main Menu' : 'Menu Utama'}</h4>
+            <h3 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Main Menu' : 'Menu Utama'}</h3>
             <ul className="space-y-2 text-xs">
-              <li><a href="#beranda" className="hover:text-pink-400 transition-colors">{isEn ? 'Home' : 'Beranda'}</a></li>
-              <li><a href="#tentang-kami" className="hover:text-pink-400 transition-colors">{isEn ? 'About Us' : 'Profil & Filosofi'}</a></li>
-              <li><a href="#perawatan" className="hover:text-pink-400 transition-colors">{isEn ? 'Treatments' : 'Layanan Perawatan'}</a></li>
-              <li><a href="#jadwal-dokter" className="hover:text-pink-400 transition-colors">{isEn ? 'Doctors' : 'Jadwal Dokter'}</a></li>
-              <li><a href="#testimoni" className="hover:text-pink-400 transition-colors">{isEn ? 'Testimonials' : 'Kata Sahabat Luminara'}</a></li>
-              <li><a href="#artikel" className="hover:text-pink-400 transition-colors">{isEn ? 'Articles' : 'Artikel Kesehatan'}</a></li>
-              <li><a href="#faq" className="hover:text-pink-400 transition-colors">FAQ</a></li>
+              <li><a href="#beranda" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'Home' : 'Beranda'}</a></li>
+              <li><a href="#tentang-kami" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'About Us' : 'Profil & Filosofi'}</a></li>
+              <li><a href="#perawatan" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'Treatments' : 'Layanan Perawatan'}</a></li>
+              <li><a href="#jadwal-dokter" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'Doctors' : 'Jadwal Dokter'}</a></li>
+              <li><a href="#testimoni" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'Testimonials' : 'Kata Sahabat Luminara'}</a></li>
+              <li><a href="#artikel" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">{isEn ? 'Articles' : 'Artikel Kesehatan'}</a></li>
+              <li><a href="#faq" className="inline-flex items-center min-h-11 hover:text-pink-400 transition-colors">FAQ</a></li>
             </ul>
           </div>
 
           {/* Perawatan Populer Column */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Popular Services' : 'Perawatan Populer'}</h4>
+            <h3 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Popular Services' : 'Perawatan Populer'}</h3>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>{isEn ? 'Teeth Bleaching' : 'Bleaching Gigi'}</li>
               <li>{isEn ? 'Direct Veneer' : 'Direct Veneer'}</li>
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Google Maps / Location Preview */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Clinic Location' : 'Lokasi Klinik'}</h4>
+            <h3 className="font-bold text-white text-sm tracking-wider uppercase">{isEn ? 'Clinic Location' : 'Lokasi Klinik'}</h3>
             <div className="rounded-2xl overflow-hidden border border-slate-800 shadow-lg h-36 bg-slate-900 relative group">
               <iframe
                 title="Luminara Dental Location Map"
@@ -126,7 +126,7 @@ export default function Footer() {
               href="https://www.google.com/maps/search/?api=1&query=0.8960399,104.4799114"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-pink-400 hover:text-pink-300 font-semibold"
+              className="inline-flex items-center gap-1.5 min-h-11 text-sm text-pink-400 hover:text-pink-300 font-semibold"
             >
               <MapPin className="w-3.5 h-3.5" />
               <span>{isEn ? 'Open Google Maps' : 'Buka Google Maps'}</span>
@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright & Disclaimer */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4 text-center sm:text-left">
+        <div className="pt-8 pb-16 sm:pb-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} <strong>Luminara Aesthetic Dental Clinic</strong>. All Rights Reserved.
           </div>

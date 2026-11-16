@@ -37,7 +37,7 @@ export default function Articles() {
               href="https://luminaradental.com/artikel.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-bold text-pink-600 hover:text-pink-700 hover:underline"
+              className="inline-flex items-center gap-2 min-h-11 text-sm font-bold text-pink-700 hover:text-pink-800 hover:underline"
             >
               <span>{isEn ? 'View All Articles' : 'Lihat Semua Artikel'}</span>
               <ArrowRight className="w-4 h-4" />
@@ -59,14 +59,14 @@ export default function Articles() {
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                  <span className="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">
                     {item.category}
                   </span>
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div>
-                    <div className="flex items-center gap-3 text-xs text-slate-400 mb-2">
+                    <div className="flex items-center gap-3 text-xs text-slate-500 mb-2">
                       <span>{item.date}</span>
                       <span>•</span>
                       <div className="flex items-center gap-1">

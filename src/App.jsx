@@ -16,10 +16,14 @@ function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedTreatment, setSelectedTreatment] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
+  // Floating WA button stays hidden for the first viewport: the hero already carries a
+  // full-width WhatsApp CTA, and on short phones (280–320px) the FAB used to cover it.
+  const [showFab, setShowFab] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
+      setShowFab(window.scrollY > window.innerHeight);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -61,9 +65,11 @@ function App() {
         initialTreatment={selectedTreatment}
       />
 
-      {/* Floating WhatsApp Quick Action Button — label always visible (not hover-only) so mobile/touch users see it too */}
+      {/* Floating WhatsApp Quick Action Button — hidden while the hero CTA is on screen so it
+          never covers the primary booking button on short viewports (280–320px wide phones). */}
       <button
         onClick={() => handleOpenBooking('')}
+        hidden={!showFab}
         aria-label="Chat WhatsApp Admin Luminara Dental"
         style={{ bottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem))' }}
         className="fixed right-6 z-40 bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white pl-3.5 pr-4 py-3 sm:pl-4 sm:pr-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group"

@@ -55,7 +55,7 @@ export default function Treatments({ onOpenBooking }) {
               <button
                 key={idx}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all ${selectedCategory === cat
+                className={`px-5 min-h-11 rounded-full text-sm font-semibold transition-all ${selectedCategory === cat
                     ? 'bg-pink-600 text-white shadow-md shadow-pink-600/25 scale-105'
                     : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                   }`}
@@ -84,7 +84,7 @@ export default function Treatments({ onOpenBooking }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 
                   {/* Badge */}
-                  <span className="absolute top-3 right-3 bg-pink-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md">
+                  <span className="absolute top-3 right-3 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                     {item.badge}
                   </span>
 
@@ -107,14 +107,14 @@ export default function Treatments({ onOpenBooking }) {
                   <div className="pt-2 flex items-center justify-between border-t border-slate-100">
                     <button
                       onClick={() => setActiveModal(item)}
-                      className="inline-flex items-center gap-1 text-xs font-bold text-pink-600 hover:text-pink-700"
+                      className="inline-flex items-center gap-1 min-h-11 px-1 text-sm font-bold text-pink-600 hover:text-pink-700"
                     >
                       <span>{isEn ? 'Details' : 'Detail Info'}</span>
                       <Info className="w-3.5 h-3.5" />
                     </button>
                     <button
                       onClick={() => onOpenBooking(item.name)}
-                      className="inline-flex items-center gap-1.5 bg-pink-50 hover:bg-pink-600 text-pink-700 hover:text-white text-xs font-bold px-3 py-1.5 rounded-xl transition-all"
+                      className="inline-flex items-center gap-1.5 min-h-11 bg-pink-50 hover:bg-pink-600 text-pink-700 hover:text-white text-sm font-bold px-4 rounded-xl transition-all"
                     >
                       <span>Booking</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -143,7 +143,7 @@ export default function Treatments({ onOpenBooking }) {
                 type="button"
                 onClick={() => setActiveModal(null)}
                 aria-label={isEn ? 'Close Modal' : 'Tutup Modal'}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-8 h-8 rounded-full bg-slate-900/50 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-md transition-colors"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-11 h-11 rounded-full bg-slate-900/50 hover:bg-slate-900 text-white flex items-center justify-center backdrop-blur-md transition-colors"
               >
                 <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
@@ -157,7 +157,7 @@ export default function Treatments({ onOpenBooking }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6 right-4 sm:right-6">
-                  <span className="bg-pink-500 text-white text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-md">
+                  <span className="bg-pink-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-md">
                     {activeModal.category}
                   </span>
                   <h3 id="treatment-modal-title" className="text-xl sm:text-2xl font-bold text-white mt-1 leading-tight">{activeModal.name}</h3>
@@ -165,7 +165,7 @@ export default function Treatments({ onOpenBooking }) {
               </div>
 
               <div className="p-4 sm:p-6 space-y-3.5 sm:space-y-4 overflow-y-auto flex-1 custom-scrollbar text-left">
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {activeModal.desc}
                 </p>
 
@@ -189,7 +189,7 @@ export default function Treatments({ onOpenBooking }) {
                   <button
                     type="button"
                     onClick={() => setActiveModal(null)}
-                    className="px-3.5 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-xl transition-colors"
+                    className="min-h-11 px-4 text-sm font-semibold text-slate-600 hover:bg-slate-100 rounded-xl transition-colors"
                   >
                     {isEn ? 'Close' : 'Tutup'}
                   </button>

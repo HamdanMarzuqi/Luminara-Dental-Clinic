@@ -169,7 +169,7 @@ export default function Navbar({ onOpenBooking }) {
           }`}
       >
         <div className="overflow-hidden">
-          <div className="bg-white border-b border-slate-100 shadow-xl px-4 pt-3 pb-6 space-y-1">
+          <div className="bg-white border-b border-slate-100 shadow-xl px-4 pt-3 pb-8 space-y-1 max-h-[calc(100dvh-5rem)] overflow-y-auto">
             {currentNavLinks.map((link, idx) => (
               <div key={idx}>
                 {link.dropdown ? (
@@ -183,7 +183,7 @@ export default function Navbar({ onOpenBooking }) {
                           key={sIdx}
                           href={sub.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block text-sm text-slate-600 py-1.5 hover:text-pink-600"
+                          className="flex items-center min-h-11 text-sm text-slate-600 hover:text-pink-600"
                         >
                           {sub.name}
                         </a>
@@ -194,7 +194,7 @@ export default function Navbar({ onOpenBooking }) {
                   <a
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block font-medium text-slate-700 text-sm py-2.5 hover:text-pink-600"
+                    className="flex items-center min-h-11 font-medium text-slate-700 text-sm hover:text-pink-600"
                   >
                     {link.name}
                   </a>
@@ -208,7 +208,7 @@ export default function Navbar({ onOpenBooking }) {
                 onClick={toggleLang}
                 aria-label={`Switch language (current: ${currentLang.full})`}
                 title={`Switch to ${lang === 'id' ? 'English' : 'Bahasa Indonesia'}`}
-                className="flex items-center gap-1 px-3 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-sm font-semibold text-slate-700 transition-colors"
+                className="flex items-center gap-2 min-h-11 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 text-sm font-semibold text-slate-700 transition-colors"
               >
                 <Globe className="w-4 h-4 text-slate-500" />
                 <span>{currentLang.flag} {currentLang.label}</span>

@@ -31,7 +31,12 @@ export default function ScrollReveal({
     const currentRef = domRef.current;
     if (currentRef) observer.observe(currentRef);
 
+    // Safety net: if IntersectionObserver never fires (older browsers, bfcache restore,
+    // reduced-motion quirks), reveal anyway. Content must never stay invisible.
+    const fallback = window.setTimeout(() => setIsVisible(true), 1500);
+
     return () => {
+      window.clearTimeout(fallback);
       if (currentRef) observer.unobserve(currentRef);
     };
   }, []);

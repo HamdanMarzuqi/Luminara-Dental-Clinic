@@ -108,7 +108,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
             <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
           
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[11px] sm:text-xs font-semibold mb-1.5 sm:mb-2">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold mb-1.5 sm:mb-2">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{isEn ? 'Online Reservation 24/7' : 'Reservasi Online 24/7'}</span>
           </div>
@@ -119,41 +119,46 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
         </div>
 
         {/* Form Body */}
-        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-3.5 sm:space-y-4 text-left overflow-y-auto flex-1 custom-scrollbar">
+        <form onSubmit={handleSubmit} className="flex flex-col flex-1 min-h-0 text-left">
+          <div className="p-4 sm:p-6 space-y-3.5 sm:space-y-4 overflow-y-auto flex-1 custom-scrollbar">
           
           {/* Nama */}
           <div>
-            <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+            <label htmlFor="bk-name" className="block text-xs font-bold text-slate-700 uppercase mb-1">
               {isEn ? 'Patient Full Name *' : 'Nama Lengkap Pasien *'}
             </label>
             <div className="relative">
               <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
               <input
+                id="bk-name"
+                name="name"
                 type="text"
                 required
                 minLength={2}
                 placeholder={isEn ? 'e.g. John Doe' : 'Contoh: Budi Santoso'}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all"
+                className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all"
               />
             </div>
           </div>
 
           {/* No WhatsApp */}
           <div>
-            <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+            <label htmlFor="bk-phone" className="block text-xs font-bold text-slate-700 uppercase mb-1">
               {isEn ? 'WhatsApp Number *' : 'Nomor WhatsApp *'}
             </label>
             <div className="relative">
               <Phone className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
               <input
+                id="bk-phone"
+                name="phone"
                 type="tel"
                 required
                 placeholder={isEn ? 'e.g. 081234567890' : 'Contoh: 081234567890'}
                 value={formData.phone}
                 onChange={handlePhoneChange}
-                className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:bg-white transition-all ${
+                className={`w-full pl-10 pr-4 py-2.5 bg-slate-50 border rounded-xl text-base focus:outline-none focus:ring-2 focus:bg-white transition-all ${
                   phoneError 
                     ? 'border-rose-400 focus:ring-rose-500' 
                     : 'border-slate-200 focus:ring-pink-500'
@@ -161,7 +166,7 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
               />
             </div>
             {phoneError && (
-              <p className="mt-1 text-[11px] text-rose-500 flex items-center gap-1">
+              <p className="mt-1 text-xs text-rose-500 flex items-center gap-1">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{phoneError}</span>
               </p>
@@ -170,13 +175,15 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
 
           {/* Jenis Perawatan */}
           <div>
-            <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+            <label htmlFor="bk-treatment" className="block text-xs font-bold text-slate-700 uppercase mb-1">
               {isEn ? 'Select Treatment' : 'Pilihan Perawatan'}
             </label>
             <select
+              id="bk-treatment"
+              name="treatment"
               value={formData.treatment}
               onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all truncate"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all truncate"
             >
               <option value={isEn ? "General Consultation / Check-up" : "Konsultasi Umum / Check-up"}>{isEn ? "General Consultation / Check-up" : "Konsultasi Umum / Check-up"}</option>
               <option value={isEn ? "Dental Braces (Orthodontics)" : "Behel Gigi (Orthodontics)"}>{isEn ? "Dental Braces (Orthodontics)" : "Behel Gigi (Orthodontics)"}</option>
@@ -193,25 +200,29 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
           {/* Tanggal & Waktu */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+              <label htmlFor="bk-date" className="block text-xs font-bold text-slate-700 uppercase mb-1">
                 {isEn ? 'Preferred Date' : 'Rencana Tanggal'}
               </label>
               <input
+                id="bk-date"
+                name="date"
                 type="date"
                 min={new Date().toISOString().split('T')[0]}
                 value={formData.date}
                 onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all min-h-[42px]"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all min-h-[48px]"
               />
             </div>
             <div>
-              <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+              <label htmlFor="bk-time" className="block text-xs font-bold text-slate-700 uppercase mb-1">
                 {isEn ? 'Time Session' : 'Sesi Waktu'}
               </label>
               <select
+                id="bk-time"
+                name="time"
                 value={formData.time}
                 onChange={(e) => setFormData({ ...formData, time: e.target.value })}
-                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all min-h-[42px] truncate"
+                className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all min-h-[48px] truncate"
               >
                 <option value={isEn ? "Morning (09:00 - 12:00)" : "Pagi (09:00 - 12:00)"}>{isEn ? "Morning (09:00 - 12:00)" : "Pagi (09:00 - 12:00)"}</option>
                 <option value={isEn ? "Afternoon (13:00 - 16:00)" : "Siang (13:00 - 16:00)"}>{isEn ? "Afternoon (13:00 - 16:00)" : "Siang (13:00 - 16:00)"}</option>
@@ -222,23 +233,33 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
 
           {/* Catatan Keluhan */}
           <div>
-            <label className="block text-[11px] sm:text-xs font-bold text-slate-700 uppercase mb-1">
+            <label htmlFor="bk-notes" className="block text-xs font-bold text-slate-700 uppercase mb-1">
               {isEn ? 'Short Notes / Symptoms (Optional)' : 'Catatan / Keluhan Singkat (Opsional)'}
             </label>
             <textarea
+              id="bk-notes"
+              name="notes"
               rows={2}
               placeholder={isEn ? 'e.g. Cavity in back molar tooth...' : 'Contoh: Gigi belakang berlubang dan ngilu...'}
               value={formData.notes}
               onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all resize-none"
+              className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-pink-500 focus:bg-white transition-all resize-none"
             />
           </div>
 
-          <div className="pt-2">
+          </div>
+
+          {/* Pinned action bar — always on screen, never hidden behind the scroll area */}
+          <div className="shrink-0 bg-white border-t border-slate-100 px-4 sm:px-6 pt-3 pb-4 space-y-2">
+          <div className="text-xs text-slate-400 text-center flex items-center justify-center gap-1">
+            <CheckCircle2 className="w-3.5 h-3.5 text-pink-600 shrink-0" />
+            <span>{isEn ? 'Free consultation & schedule confirmation via WhatsApp' : 'Gratis konsultasi & konfirmasi ketersediaan via WhatsApp'}</span>
+          </div>
+
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full flex items-center justify-center gap-2 font-bold text-xs sm:text-sm py-3 sm:py-3.5 rounded-xl sm:rounded-2xl shadow-lg transition-all transform active:scale-[0.98] ${
+              className={`w-full flex items-center justify-center gap-2 font-bold text-sm min-h-12 rounded-xl sm:rounded-2xl shadow-lg transition-all transform active:scale-[0.98] ${
                 isSubmitting
                   ? 'bg-slate-400 cursor-not-allowed shadow-none'
                   : 'bg-gradient-to-r from-pink-500 via-fuchsia-600 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white shadow-pink-500/30 hover:shadow-xl hover:-translate-y-0.5'
@@ -247,11 +268,6 @@ export default function BookingModal({ isOpen, onClose, initialTreatment = '' })
               <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 fill-white/20 shrink-0" />
               <span>{isSubmitting ? (isEn ? 'Sending...' : 'Mengirim...') : (isEn ? 'Send Form to Admin WhatsApp' : 'Kirim Formulir ke WhatsApp Admin')}</span>
             </button>
-          </div>
-
-          <div className="text-[10px] sm:text-[11px] text-slate-400 text-center flex items-center justify-center gap-1 pt-1">
-            <CheckCircle2 className="w-3.5 h-3.5 text-pink-600 shrink-0" />
-            <span>{isEn ? 'Free consultation & schedule confirmation via WhatsApp' : 'Gratis konsultasi & konfirmasi ketersediaan via WhatsApp'}</span>
           </div>
 
         </form>

@@ -50,7 +50,7 @@ export default function Doctors({ onOpenBooking }) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="bg-pink-600 text-white text-[11px] font-bold px-3 py-1 rounded-full">
+                    <span className="bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       {doc.role}
                     </span>
                     <h3 className="text-xl font-bold mt-1 text-white">{doc.name}</h3>
@@ -61,7 +61,7 @@ export default function Doctors({ onOpenBooking }) {
                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                   <div className="space-y-3 text-xs sm:text-sm">
                     <div>
-                      <span className="font-semibold text-slate-400 text-xs uppercase tracking-wider block mb-1">
+                      <span className="font-semibold text-slate-500 text-xs uppercase tracking-wider block mb-1">
                         {isEn ? 'Core Expertise:' : 'Keahlian Utama:'}
                       </span>
                       <p className="text-slate-700 font-medium">
@@ -80,7 +80,7 @@ export default function Doctors({ onOpenBooking }) {
 
                   <button
                     onClick={() => onOpenBooking(isEn ? `Consultation with ${doc.name}` : `Pemeriksaan dengan ${doc.name}`)}
-                    className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-pink-600 text-white font-bold text-xs sm:text-sm py-3 rounded-xl transition-all shadow-md"
+                    className="w-full flex items-center justify-center gap-2 bg-slate-900 hover:bg-pink-600 text-white font-bold text-sm py-3.5 min-h-12 rounded-xl transition-all shadow-md"
                   >
                     <Calendar className="w-4 h-4" />
                     <span>{isEn ? 'Select Doctor & Book' : 'Pilih Dokter & Reservasi'}</span>

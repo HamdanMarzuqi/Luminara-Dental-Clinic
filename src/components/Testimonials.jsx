@@ -70,7 +70,7 @@ export default function Testimonials() {
                     className="w-12 h-12 rounded-full object-cover border-2 border-pink-400"
                   />
                   <div>
-                    <h4 className="font-bold text-white text-sm">{item.name}</h4>
+                    <h3 className="font-bold text-white text-sm">{item.name}</h3>
                     <span className="text-xs text-pink-300 font-medium block">{item.title}</span>
                   </div>
                 </div>

@@ -93,7 +93,7 @@ export default function Hero({ onOpenBooking }) {
             </div>
 
             {/* Rating & Social Proof Footer */}
-            <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-500">
+            <div className="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-600">
               <div className="flex items-center gap-1.5">
                 <div className="flex text-amber-400">
                   {[...Array(5)].map((_, i) => (
@@ -157,7 +157,7 @@ export default function Hero({ onOpenBooking }) {
                 </div>
                 <div>
                   <div className="font-bold text-slate-900 text-xs sm:text-sm">{isEn ? 'Open Everyday' : 'Buka Setiap Hari'}</div>
-                  <div className="text-[11px] text-slate-500">08:00 - 21:00 WIB</div>
+                  <div className="text-xs text-slate-500">08:00 - 21:00 WIB</div>
                 </div>
               </div>
 

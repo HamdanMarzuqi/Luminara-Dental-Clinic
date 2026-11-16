@@ -89,7 +89,7 @@ export default function FAQ({ onOpenBooking }) {
             </p>
             <button
               onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-bold text-sm px-6 py-3 rounded-2xl transition-all shadow-md"
+              className="inline-flex items-center gap-2 bg-pink-600 hover:bg-pink-700 text-white font-bold text-sm px-6 min-h-12 rounded-2xl transition-all shadow-md"
             >
               <MessageCircle className="w-4 h-4" />
               <span>{isEn ? 'Contact Us on WhatsApp' : 'Hubungi Kami via WhatsApp'}</span>
