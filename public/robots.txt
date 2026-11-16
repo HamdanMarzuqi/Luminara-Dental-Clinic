@@ -1,9 +1,9 @@
-# Robots.txt for Duwa Dental
+# Robots.txt for Luminara Dental
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://duwadental.com/sitemap.xml
+Sitemap: https://luminaradental.com/sitemap.xml
 
 # Disallow admin/private paths (none currently, but good practice)
 Disallow: /node_modules/

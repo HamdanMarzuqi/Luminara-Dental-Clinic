@@ -47,16 +47,16 @@ export default function WhyUs() {
             return (
               <ScrollReveal key={idx} delay={idx * 120} direction="up">
                 <div
-                  className="group relative bg-slate-50 hover:bg-gradient-to-b hover:from-pink-500 hover:to-fuchsia-600 p-8 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1.5 border border-slate-100 h-full flex flex-col justify-between"
+                  className="group relative bg-slate-50 hover:bg-gradient-to-b hover:from-pink-500 hover:to-fuchsia-600 p-3 rounded-3xl transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1.5 border border-slate-100 h-full flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-14 h-14 rounded-2xl bg-pink-100 text-pink-700 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center mb-6 transition-colors">
-                      <IconComponent className="w-7 h-7" />
+                    <div className="w-12 h-12 rounded-2xl bg-pink-100 text-pink-700 group-hover:bg-white/20 group-hover:text-white flex items-center justify-center mb-3 transition-colors">
+                      <IconComponent className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-white mb-1 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 group-hover:text-pink-50 text-sm leading-relaxed transition-colors">
+                    <p className="text-slate-600 group-hover:text-pink-50 text-sm leading-snug transition-colors">
                       {item.desc}
                     </p>
                   </div>
