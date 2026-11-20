@@ -46,10 +46,10 @@ export default function FAQ({ onOpenBooking }) {
             return (
               <ScrollReveal key={idx} delay={idx * 80} direction="up">
                 <div
-                  className={`group rounded-2xl border border-l-4 transition-all duration-300 overflow-hidden ${
+                  className={`group rounded-2xl border border-l-4 transition-all duration-500 ease-out overflow-hidden ${
                     isOpen
-                      ? 'bg-pink-50/40 border-pink-300 border-l-pink-700 shadow-md'
-                      : 'bg-white border-slate-200 border-l-transparent hover:border-pink-200 hover:border-l-pink-500 hover:shadow-sm'
+                      ? 'bg-pink-50/40 border-pink-200 border-l-pink-400 shadow-sm'
+                      : 'bg-white border-slate-200 border-l-transparent hover:border-pink-100 hover:border-l-pink-300 hover:shadow-sm'
                   }`}
                 >
                   <button
@@ -60,9 +60,9 @@ export default function FAQ({ onOpenBooking }) {
                     <span className="flex items-center gap-3.5 flex-1">
                       {/* Number badge accent */}
                       <span
-                        className={`w-8 h-8 rounded-xl grid place-items-center text-xs font-bold shrink-0 transition-colors ${
+                        className={`w-8 h-8 rounded-xl grid place-items-center text-xs font-bold shrink-0 transition-colors duration-500 ${
                           isOpen
-                            ? 'bg-pink-700 text-white'
+                            ? 'bg-pink-600 text-white'
                             : 'bg-pink-100 text-pink-700 group-hover:bg-pink-200'
                         }`}
                         aria-hidden="true"
@@ -71,7 +71,7 @@ export default function FAQ({ onOpenBooking }) {
                       </span>
 
                       <span
-                        className={`font-bold text-sm sm:text-base transition-colors ${
+                        className={`font-bold text-sm sm:text-base transition-colors duration-500 ${
                           isOpen ? 'text-pink-700' : 'text-slate-900'
                         }`}
                       >
@@ -80,8 +80,8 @@ export default function FAQ({ onOpenBooking }) {
                     </span>
 
                     <span
-                      className={`w-9 h-9 rounded-full grid place-items-center shrink-0 transition-all duration-300 ${
-                        isOpen ? 'bg-pink-700 text-white rotate-180' : 'bg-slate-100 text-slate-500'
+                      className={`w-9 h-9 rounded-full grid place-items-center shrink-0 transition-all duration-500 ease-out ${
+                        isOpen ? 'bg-pink-600 text-white rotate-180' : 'bg-slate-100 text-slate-500'
                       }`}
                       aria-hidden="true"
                     >
