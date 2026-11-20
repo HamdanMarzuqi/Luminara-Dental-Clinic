@@ -56,6 +56,7 @@ export default function Hero({ onOpenBooking }) {
             </p>
 
             {/* Quick Benefits Bullet List */}
+            {/*
             <div className="pt-1 grid grid-cols-2 gap-3 max-w-md mx-auto lg:mx-0 text-xs sm:text-sm text-slate-700 font-medium">
               <div className="flex items-center gap-2 justify-center lg:justify-start">
                 <CheckCircle2 className="w-4 h-4 text-pink-600 flex-shrink-0" />
@@ -74,6 +75,7 @@ export default function Hero({ onOpenBooking }) {
                 <span>{isEn ? 'Affordable Installment Plans' : 'Cicilan Behel Terjangkau'}</span>
               </div>
             </div>
+            */}
 
             {/* Action Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -100,8 +102,8 @@ export default function Hero({ onOpenBooking }) {
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <span className="font-bold text-slate-800 text-sm ml-1">4.9 / 5.0</span>
-                <span>{isEn ? '(500+ Patient Reviews)' : '(500+ Review Pasien)'}</span>
+                <span className="font-bold text-slate-800 text-sm ml-1">5.0 / 5.0</span>
+                <span>{isEn ? '(340+ Patient Reviews)' : '(340+ Ulasan Pasien)'}</span>
               </div>
               <div className="flex items-center gap-2 font-medium text-slate-600">
                 <ShieldCheck className="w-4 h-4 text-pink-600" />

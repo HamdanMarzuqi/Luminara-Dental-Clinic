@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-pink-500 selection:text-white relative">
-      
+
       {/* Header & Navigation */}
       <Navbar onOpenBooking={() => handleOpenBooking('')} />
 
@@ -49,7 +49,7 @@ function App() {
         <Hero onOpenBooking={() => handleOpenBooking('')} />
         <WhyUs />
         <Treatments onOpenBooking={handleOpenBooking} />
-        <Doctors onOpenBooking={handleOpenBooking} />
+        <Doctors />
         <Testimonials />
         <Articles />
         <FAQ onOpenBooking={() => handleOpenBooking('')} />
@@ -75,7 +75,7 @@ function App() {
         className="fixed right-6 z-40 bg-gradient-to-r from-pink-500 to-fuchsia-600 hover:from-pink-600 hover:to-fuchsia-700 text-white pl-3.5 pr-4 py-3 sm:pl-4 sm:pr-5 sm:py-3.5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 group"
       >
         <FaWhatsapp className="w-6 h-6 sm:w-7 sm:h-7 shrink-0" />
-        <span className="text-xs sm:text-sm font-bold whitespace-nowrap">Chat WA</span>
+        <span className="text-xs sm:text-sm font-bold whitespace-nowrap">Reservasi Sekarang</span>
       </button>
 
       {/* Scroll to Top Button */}

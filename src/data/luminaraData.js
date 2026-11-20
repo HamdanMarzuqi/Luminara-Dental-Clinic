@@ -338,47 +338,85 @@ export const doctors = {
   id: [
     {
       name: "drg. Prima, Sp.Ort",
-      role: "Spesialis Ortodonti",
-      spec: "Spesialis Behel Gigi, Alignment & Orthodontic Makeover",
+      role: "Dentist",
+      spec: "Behel Gigi, Alignment & Orthodontic Makeover",
       image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
-      schedule: "Senin, Rabu, Jumat (14:00 - 20:00 WIB)"
+      schedules: [
+        { day: "Senin - Rabu", time: "16:00 - 20:00" },
+        { day: "Jumat", time: "13:00 - 17:00" }
+      ]
     },
     {
       name: "drg. Anggun, Sp.KGA",
-      role: "Spesialis Kedokteran Gigi Anak",
-      spec: "Dokter Gigi Anak, Ramah Anak, ABK & ADHD Friendly",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
-      schedule: "Selasa, Kamis, Sabtu (09:00 - 16:00 WIB)"
+      role: "Dentist",
+      spec: "Ramah Anak, ABK & ADHD Friendly",
+      image: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Selasa & Kamis", time: "10:00 - 15:00" },
+        { day: "Sabtu", time: "09:00 - 14:00" }
+      ]
     },
     {
       name: "drg. Sari, Sp.KG",
-      role: "Spesialis Konservasi Gigi",
-      spec: "Perawatan Saluran Akar (PSA), Veneer & Restorasi Estetik",
-      image: "https://images.unsplash.com/photo-1594824813570-789297584c87?q=80&w=600&auto=format&fit=crop",
-      schedule: "Senin - Sabtu (10:00 - 18:00 WIB)"
+      role: "Dentist",
+      spec: "PSA, Veneer & Restorasi Estetik",
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Senin & Kamis", time: "13:00 - 18:00" },
+        { day: "Sabtu", time: "14:00 - 19:00" }
+      ]
+    },
+    {
+      name: "drg. Anne Shinta Rufaeda",
+      role: "Dentist",
+      spec: "Pembersihan Karang, Scaling & Tambal Gigi",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Rabu & Jumat", time: "09:00 - 15:00" },
+        { day: "Minggu", time: "10:00 - 16:00" }
+      ]
     }
   ],
   en: [
     {
       name: "drg. Prima, Sp.Ort",
-      role: "Orthodontics Specialist",
-      spec: "Braces Specialist, Teeth Alignment & Orthodontic Makeover",
+      role: "Dentist",
+      spec: "Braces, Alignment & Orthodontic Makeover",
       image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
-      schedule: "Monday, Wednesday, Friday (14:00 - 20:00 WIB)"
+      schedules: [
+        { day: "Monday - Wednesday", time: "16:00 - 20:00" },
+        { day: "Friday", time: "13:00 - 17:00" }
+      ]
     },
     {
       name: "drg. Anggun, Sp.KGA",
-      role: "Pediatric Dental Specialist",
-      spec: "Kid-Friendly Dentist, Special Needs & ADHD Care",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
-      schedule: "Tuesday, Thursday, Saturday (09:00 - 16:00 WIB)"
+      role: "Dentist",
+      spec: "Kid-Friendly, Special Needs & ADHD Care",
+      image: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Tuesday & Thursday", time: "10:00 - 15:00" },
+        { day: "Saturday", time: "09:00 - 14:00" }
+      ]
     },
     {
       name: "drg. Sari, Sp.KG",
-      role: "Conservative Dentistry Specialist",
+      role: "Dentist",
       spec: "Root Canal Treatment (RCT), Veneers & Aesthetic Restoration",
-      image: "https://images.unsplash.com/photo-1594824813570-789297584c87?q=80&w=600&auto=format&fit=crop",
-      schedule: "Monday - Saturday (10:00 - 18:00 WIB)"
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Monday & Thursday", time: "13:00 - 18:00" },
+        { day: "Saturday", time: "14:00 - 19:00" }
+      ]
+    },
+    {
+      name: "drg. Anne Shinta Rufaeda",
+      role: "Dentist",
+      spec: "Scaling, Tartar Removal & Dental Fillings",
+      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop",
+      schedules: [
+        { day: "Wednesday & Friday", time: "09:00 - 15:00" },
+        { day: "Sunday", time: "10:00 - 16:00" }
+      ]
     }
   ]
 };
@@ -386,56 +424,56 @@ export const doctors = {
 export const testimonials = {
   id: [
     {
-      name: "Anthony Sudarsono",
-      title: "Property Investor",
+      name: "Citra Dewi",
+      title: "Sahabat Luminara",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
-      text: "Saya melakukan perawatan bleaching di Luminara Dental dan hasilnya sangat memuaskan! Dalam waktu kurang dari 1,5 jam, warna gigi saya naik sekitar 9 tingkat lebih cerah, perbedaannya langsung terlihat. Prosesnya cepat, nyaman, dan hasilnya sesuai harapan.",
+      text: "Pelayanan di klinik Luminara sangat memuaskan. Dokternya ramah, profesional, dan menjelaskan kondisi gigi anak serta prosedur perawatan dengan jelas. Proses pemeriksaannya juga teliti dan tidak terburu-buru, perawatnya juga ramah. Tempatnya bersih, nyaman, dan kids friendly jadi anak periksa gigi bisa sambil bermain. Recommended banget untuk yang sedang mencari klinik gigi dengan pelayanan yang bagus dan profesional 👍🦷.",
       rating: 5
     },
     {
-      name: "drg. Anne Shinta Rufaeda",
-      title: "Founder",
+      name: "Amanda Sari",
+      title: "Sahabat Luminara",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
-      text: "Aku datang ke Luminara Dental untuk treatment lengkap: bleaching, pembersihan karang gigi, dan perbaikan veneer gigi depan. Jujur sebelumnya aku takut ke dokter gigi karena trauma sakit. Tapi di sini, semua treatment nyaman tanpa rasa sakit!",
+      text: "Pelayanan Klinik Gigi Luminara sangat memuaskan! 🦷✨ Dokter dan stafnya ramah, profesional, serta membuat pasien merasa nyaman. Kliniknya bersih, design estetik dan pelayanannya sangat baik. Terima kasih atas perawatan terbaiknya. Sukses selalu untuk Klinik Gigi Luminara! Recommended! 💙 Ada ice cream gratis 🍦🍦🍦.",
       rating: 5
     },
     {
-      name: "Dyodoran",
-      title: "Youtuber Food Vlogger",
+      name: "Paskah Maria Sinaga",
+      title: "Sahabat Luminara",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
-      text: "Sebagai pecinta kuliner manis dan berlemak, penting banget jaga gigi. Pertama kali ke Luminara Dental untuk scaling, langsung merasa puas! Gigi terasa bersih, nafas segar, dan tanpa rasa sakit. Kliniknya nyaman dan modern.",
+      text: "In love with the ambience! 😍 Dokter dan semua staff nya ramah banget dan kalau kasih info sangat lengkap dan detail. yang paling penting, tempat nya juga bersih! ✨ Tempat nya nyaman kalau kita nunggu, ada snack corner nya juga ✨🤤Thank you Luminara! 🫶🏻.",
       rating: 5
     },
     {
-      name: "Adityalogy",
-      title: "Content Creator & Musisi",
+      name: "Rini Ariska",
+      title: "Sahabat Luminara",
       avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-      text: "Baru aja selesai scaling di Luminara Dental! Kliniknya super kids friendly, ruang tindakannya punya suasana hangat dan nyaman. Hasil scaling-nya juga rapi dan bersih banget. Buat warga Tanjung Pinang, wajib coba ke sini!",
+      text: "Alhamdulillah, Luminara Dental Tanjungpinang selalu memberikan pelayanan terbaik. Kecemasan bisa diubah menjadi kenyamanan. pelayanannya terbaik, tempatnya aman, nyaman, bersih, wangi. Masyaallah. Luminara sudah dibangun dari awal dengan hati oleh Dokter Anne, sehingga membuat pelanggan bisa jatuh hati berkali-kali 🥰😍 Sukses selalu Luminara. Yuk berani ke dokter gigi 😍",
       rating: 5
     },
     {
-      name: "Bojo25 Bojos",
+      name: "Leni Syaf",
       title: "Sahabat Luminara",
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
-      text: "Anak saya adalah ABK dengan ADHD, dan sangat melegakan mengetahui bahwa Luminara Dental memiliki dokter gigi spesialis anak dengan subspesialisasi ABK. Anak kami keluar dari ruang tindakan dengan tetap tersenyum dan bahagia.",
+      text: "Pelayanannya sangat ramah dan profesional. Dari proses pendaftaran sampai selesai perawatan semuanya dijelaskan dengan baik dan membuat saya merasa nyaman. Dokternya juga teliti, sabar, dan memberikan penjelasan yang mudah dipahami. Kliniknya bersih, nyaman, dan jadwalnya cukup tertata. Terima kasih Luminara Dental, sangat puas dengan pelayanannya. Sukses selalu! 😊🦷.",
       rating: 5
     },
     {
-      name: "Meita Sanny",
-      title: "Sahabat Luminara",
+      name: "Helen LI",
+      title: "Local Guide",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
-      text: "Saya mantap memilih Luminara Dental untuk behel Damon Self Ligating. Hasilnya terbukti rapi dan berkualitas dengan sistem cicilan yang sangat membantu. Rela bolak-balik dari Cilacap setiap bulan!",
+      text: "kuddos for the whole dentist and team!! sangat ramah dan mau explain tanpa menghakimi. Priksa gigi ga horor.  facilitas sangat proper. Sesuai dengan harga",
+      rating: 5
+    },
+    {
+      name: "Erinda Marshanda",
+      title: "Sahabat Luminara",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+      text: "sangat aesthetic, nyaman dan juga kids friendly💗 pelayanan sangat ramah, ada photobooth dan snack corner juga😍 so sooo satisfied🥰💗.",
       rating: 5
     }
   ],
   en: [
-    {
-      name: "Anthony Sudarsono",
-      title: "Property Investor",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
-      text: "I did teeth bleaching at Luminara Dental and the result was amazing! In less than 1.5 hours, my teeth became about 9 shades brighter. Fast, comfortable, and met my expectations perfectly.",
-      rating: 5
-    },
     {
       name: "drg. Anne Shinta Rufaeda",
       title: "Founder",
