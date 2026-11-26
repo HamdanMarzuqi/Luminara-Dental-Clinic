@@ -55,12 +55,16 @@ export default function Doctors() {
               <div className="bg-gradient-to-b from-pink-50/80 to-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-xl hover:border-pink-300 hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group h-full">
 
                 {/* Photo */}
-                <div className="relative h-64 overflow-hidden bg-pink-50">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-pink-50">
                   <img
-                    src={doc.image}
+                    src={doc.image || '/doctors/placeholder-doctor.svg'}
                     alt={doc.name}
                     loading="lazy"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/doctors/placeholder-doctor.svg';
+                    }}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-semibold text-emerald-700 border border-emerald-100 shadow-sm flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />

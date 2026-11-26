@@ -337,52 +337,93 @@ export const treatments = {
 export const doctors = {
   id: [
     {
-      name: "drg. Prima, Sp.Ort",
+      name: "drg. Zasha",
       role: "Dentist",
       spec: "Behel Gigi, Alignment & Orthodontic Makeover",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/drg_1.jpg",
       schedules: [
         { day: "Senin - Rabu", time: "16:00 - 20:00" },
         { day: "Jumat", time: "13:00 - 17:00" }
       ]
     },
     {
-      name: "drg. Anggun, Sp.KGA",
+      name: "drg. ",
       role: "Dentist",
       spec: "Ramah Anak, ABK & ADHD Friendly",
-      image: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/drg_2.jpg",
       schedules: [
         { day: "Selasa & Kamis", time: "10:00 - 15:00" },
         { day: "Sabtu", time: "09:00 - 14:00" }
       ]
     },
     {
-      name: "drg. Sari, Sp.KG",
+      name: "drg. Anne Shinta Rufaeda",
       role: "Dentist",
       spec: "PSA, Veneer & Restorasi Estetik",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/drg_3.jpg",
       schedules: [
         { day: "Senin & Kamis", time: "13:00 - 18:00" },
         { day: "Sabtu", time: "14:00 - 19:00" }
       ]
     },
     {
-      name: "drg. Anne Shinta Rufaeda",
+      name: "drg. Anindita",
       role: "Dentist",
       spec: "Pembersihan Karang, Scaling & Tambal Gigi",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/drg_4.jpg",
+      schedules: [
+        { day: "Rabu & Jumat", time: "09:00 - 15:00" },
+        { day: "Minggu", time: "10:00 - 16:00" }
+      ]
+    },
+    {
+      name: "drg. ",
+      role: "Dentist",
+      spec: "Pembersihan Karang, Scaling & Tambal Gigi",
+      image: "/doctors/drg_5.jpg",
+      schedules: [
+        { day: "Rabu & Jumat", time: "09:00 - 15:00" },
+        { day: "Minggu", time: "10:00 - 16:00" }
+      ]
+    },
+    {
+      name: "drg. ",
+      role: "Dentist",
+      spec: "Pembersihan Karang, Scaling & Tambal Gigi",
+      image: "/doctors/drg_6.jpg",
+      schedules: [
+        { day: "Rabu & Jumat", time: "09:00 - 15:00" },
+        { day: "Minggu", time: "10:00 - 16:00" }
+      ]
+    },
+    {
+      name: "drg. ",
+      role: "Dentist",
+      spec: "Pembersihan Karang, Scaling & Tambal Gigi",
+      image: "/doctors/drg_7.jpg",
+      schedules: [
+        { day: "Rabu & Jumat", time: "09:00 - 15:00" },
+        { day: "Minggu", time: "10:00 - 16:00" }
+      ]
+    },
+    {
+      name: "drg. ",
+      role: "Dentist",
+      spec: "Pembersihan Karang, Scaling & Tambal Gigi",
+      image: "/doctors/drg_8.jpg",
       schedules: [
         { day: "Rabu & Jumat", time: "09:00 - 15:00" },
         { day: "Minggu", time: "10:00 - 16:00" }
       ]
     }
+
   ],
   en: [
     {
       name: "drg. Prima, Sp.Ort",
       role: "Dentist",
       spec: "Braces, Alignment & Orthodontic Makeover",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/dokter-1.jpg",
       schedules: [
         { day: "Monday - Wednesday", time: "16:00 - 20:00" },
         { day: "Friday", time: "13:00 - 17:00" }
@@ -392,7 +433,7 @@ export const doctors = {
       name: "drg. Anggun, Sp.KGA",
       role: "Dentist",
       spec: "Kid-Friendly, Special Needs & ADHD Care",
-      image: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/dokter-2.jpg",
       schedules: [
         { day: "Tuesday & Thursday", time: "10:00 - 15:00" },
         { day: "Saturday", time: "09:00 - 14:00" }
@@ -402,7 +443,7 @@ export const doctors = {
       name: "drg. Sari, Sp.KG",
       role: "Dentist",
       spec: "Root Canal Treatment (RCT), Veneers & Aesthetic Restoration",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
+      image: "/doctors/dokter-3.jpg",
       schedules: [
         { day: "Monday & Thursday", time: "13:00 - 18:00" },
         { day: "Saturday", time: "14:00 - 19:00" }
@@ -412,7 +453,7 @@ export const doctors = {
       name: "drg. Anne Shinta Rufaeda",
       role: "Dentist",
       spec: "Scaling, Tartar Removal & Dental Fillings",
-      image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=600&auto=format&fit=crop",
+      image: "/foto_drg_anne.jpeg",
       schedules: [
         { day: "Wednesday & Friday", time: "09:00 - 15:00" },
         { day: "Sunday", time: "10:00 - 16:00" }

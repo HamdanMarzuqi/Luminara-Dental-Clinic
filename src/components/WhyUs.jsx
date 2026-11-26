@@ -68,15 +68,13 @@ export default function WhyUs() {
 
         {/* Philosophy & Facility Highlight Banner */}
         <ScrollReveal delay={200} direction="scale">
-          <div id="filosofi" className="mt-16 bg-gradient-to-br from-[#95186c] via-[#b81e85] to-[#95186c] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div id="filosofi" className="mt-16 bg-gradient-to-r from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
 
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#e879c8]/35 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#c026d3]/30 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-[#f0abdb]/25 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
               <div className="lg:col-span-8 space-y-4">
-                <span className="text-pink-200 font-mono text-xs uppercase tracking-widest font-bold">
+                <span className="text-pink-400 font-mono text-xs uppercase tracking-widest font-bold">
                   {isEn ? 'Luminara Service Philosophy' : 'Filosofi Pelayanan Luminara'}
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
@@ -85,33 +83,33 @@ export default function WhyUs() {
                     : '"Kesehatan & Kepercayaan Pasien Adalah Prioritas Utama Kami"'
                   }
                 </h3>
-                <p className="text-pink-50/90 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                   {isEn
                     ? 'As an aesthetic dental clinic focused on orthodontic excellence, we provide modern technology-driven care directly performed by specialist dentists. Every procedure is explained transparently so you feel safe from start to finish.'
-                    : 'Sebagai klinik gigi yang berfokus pada keunggulan estetika gigi, kami menghadirkan pelayanan berbasis teknologi modern yang ditangani langsung oleh tim dokter gigi spesialis & dokter gigi umum berpengalaman. Setiap prosedur dijelaskan secara terbuka sehingga Anda merasa aman dari awal hingga selesai.'
+                    : 'Sebagai klinik gigi yang berfokus pada keunggulan estetika gigi, kami menghadirkan pelayanan berbasis teknologi modern yang ditangani langsung oleh tim dokter gigi umum & dokter gigi spesialis berpengalaman. Setiap prosedur dijelaskan secara terbuka sehingga Anda merasa aman dari awal hingga selesai.'
                   }
                 </p>
-                <div className="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm text-pink-100">
+                <div className="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm text-pink-200">
                   <div className="flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-pink-300" />
+                    <CheckCircle className="w-4 h-4 text-pink-400" />
                     <span>{isEn ? 'Clean & Fragrant Waiting Area' : 'Ruang Tunggu Bersih & Wangi'}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-pink-300" />
+                    <CheckCircle className="w-4 h-4 text-pink-400" />
                     <span>{isEn ? 'Kid-Friendly Mini Playground' : 'Mini Playground Ramah Anak'}</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-pink-300" />
+                    <CheckCircle className="w-4 h-4 text-pink-400" />
                     <span>{isEn ? 'Before-After Transparency' : 'Before-After Transparency'}</span>
                   </div>
                 </div>
               </div>
 
               <div className="lg:col-span-4 flex justify-center">
-                <div className="bg-white/15 backdrop-blur-md border border-white/25 p-6 rounded-2xl text-center space-y-2 max-w-xs w-full">
-                  <div className="text-4xl font-extrabold text-pink-50">100%</div>
-                  <div className="text-sm font-semibold text-pink-50">{isEn ? 'Accuracy & Satisfaction' : 'Rating & Kepuasan Pasien'}</div>
-                  <div className="text-xs text-pink-50/90">{isEn ? 'Based on reviews & ratings from 330+ Luminara Dental Clinic Tanjung Pinang patients on Google Maps' : 'Berdasarkan ulasan & rating 330+ pasien Luminara Dental Clinic Tanjung Pinang di Google Maps'}</div>
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl text-center space-y-2 max-w-xs w-full">
+                  <div className="text-4xl font-extrabold text-pink-400">100%</div>
+                  <div className="text-sm font-semibold text-slate-200">{isEn ? 'Accuracy & Satisfaction' : 'Rating & Kepuasan Pasien'}</div>
+                  <div className="text-xs text-slate-400">{isEn ? 'Based on reviews & ratings from 330+ Luminara Dental Clinic Tanjung Pinang patients on Google Maps' : 'Berdasarkan ulasan & rating 330+ pasien Luminara Dental Clinic Tanjung Pinang di Google Maps'}</div>
                 </div>
               </div>
             </div>
